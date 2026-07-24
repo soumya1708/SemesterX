@@ -1675,6 +1675,11 @@ function buyPremium(){
 
     }
 
+    if(isPremiumUser()){
+        enterMentorshipRoom();
+        return;
+    }
+
     openPaymentModal();
 
 }
@@ -1686,13 +1691,12 @@ function buyPremium(){
 
 function enterMentorshipRoom(){
 
-    showToast(
+    if(!isPremiumUser()){
+        showToast("Premium Membership Required","warning");
+        return;
+    }
 
-        "Opening Mentorship Dashboard...",
-
-        "success"
-
-    );
+    window.location.href = "premium-dashboard.html";
 
 }
 
@@ -1825,6 +1829,8 @@ async function verifyPayment(
             "success"
 
         );
+
+        window.location.href = "premium-dashboard.html";
 
     }
 
