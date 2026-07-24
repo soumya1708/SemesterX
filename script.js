@@ -206,8 +206,9 @@ async function handleCredentialResponse(response) {
         );
 
         closeAuthModal();
-
         checkPersistentAuthStatus();
+
+        updateDashboardWelcome();
 
         if (postAuthRedirectActionCallback != null) {
 
@@ -267,6 +268,37 @@ function isLoggedIn() {
     return getJwt() !== null;
 
 }
+/*==========================================================
+                DASHBOARD WELCOME
+==========================================================*/
+
+function updateDashboardWelcome() {
+
+    const heading =
+        document.getElementById(
+            "dashboard-welcome"
+        );
+
+    if (!heading) return;
+
+    const user = getCurrentUser();
+
+    if (!user || !user.name) {
+
+        heading.textContent =
+            "Welcome Back, Explorer!";
+
+        return;
+
+    }
+
+    const firstName =
+        user.name.split(" ")[0];
+
+    heading.textContent =
+        `Welcome Back, ${firstName}!`;
+
+}
 
 
 /*==========================================================
@@ -286,7 +318,7 @@ function logout() {
     }
 
     checkPersistentAuthStatus();
-
+    updateDashboardWelcome();
     navigateTo("landing-view");
 
     showToast(
@@ -328,12 +360,13 @@ function navigateTo(viewId) {
 
     if (viewId === "dashboard-view") {
 
-        document.getElementById("dash-dept-lbl").textContent =
-            appState.currentDept;
+    document.getElementById("dash-dept-lbl").textContent =
+        appState.currentDept;
 
-        document.getElementById("dash-sem-lbl").textContent =
-            appState.currentSem;
+    document.getElementById("dash-sem-lbl").textContent =
+        appState.currentSem;
 
+    updateDashboardWelcome();
     }
 
     if (viewId === "mentorship-view") {
