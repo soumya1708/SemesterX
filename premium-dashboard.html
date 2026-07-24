@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SemesterX - Premium Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="premium.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="premium-body">
+
+    <div id="toast-container"></div>
+
+    <div class="premium-layout">
+
+        <aside class="premium-sidebar">
+            <div class="logo premium-sidebar-logo">
+                <i class="fa-solid fa-graduation-cap gradient-text-icon"></i>
+                <span>Semester<span class="accent-text">X</span></span>
+            </div>
+
+            <ul class="premium-menu">
+                <li class="premium-menu-item active" data-section="dashboard">
+                    <i class="fa-solid fa-house"></i> <span>Dashboard</span>
+                </li>
+                <li class="premium-menu-item" data-section="roadmap">
+                    <i class="fa-solid fa-route"></i> <span>Roadmap</span>
+                </li>
+                <li class="premium-menu-item" data-section="video">
+                    <i class="fa-solid fa-video"></i> <span>Video Bootcamp</span>
+                </li>
+                <li class="premium-menu-item" data-section="notes">
+                    <i class="fa-solid fa-note-sticky"></i> <span>Short Notes</span>
+                </li>
+                <li class="premium-menu-item" data-section="pyq">
+                    <i class="fa-solid fa-book-open-reader"></i> <span>PYQ Solutions</span>
+                </li>
+                <li class="premium-menu-item" data-section="profile">
+                    <i class="fa-solid fa-user"></i> <span>Profile</span>
+                </li>
+            </ul>
+
+            <button class="btn btn-secondary btn-full premium-logout-btn" id="premium-logout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i> Logout
+            </button>
+        </aside>
+
+        <main class="premium-main">
+
+            <div class="dashboard-header premium-topbar">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <div class="dash-welcome">
+                    <h2>Welcome Back, <span id="premium-user-name">Explorer</span>! 👋</h2>
+                    <p>Here is your Premium Membership control center.</p>
+                </div>
+                <span class="premium-badge-large"><i class="fa-solid fa-crown"></i> Premium Member</span>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="dash-card" data-section="roadmap">
+                    <div class="dash-card-icon c-bg-1"><i class="fa-solid fa-route"></i></div>
+                    <h3> Roadmap</h3>
+                    <p>Your personalized structural preparation roadmap and milestone checkpoints.</p>
+                    <span class="dash-card-action">Explore <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+                <div class="dash-card" data-section="video">
+                    <div class="dash-card-icon c-bg-2"><i class="fa-solid fa-video"></i></div>
+                    <h3> Video Bootcamp</h3>
+                    <p>Curated video lecture bootcamps covering high-yield exam topics.</p>
+                    <span class="dash-card-action">Explore <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+                <div class="dash-card" data-section="notes">
+                    <div class="dash-card-icon c-bg-3"><i class="fa-solid fa-note-sticky"></i></div>
+                    <h3> Short Notes</h3>
+                    <p>Quick-revision short notes engineered for last minute preparation.</p>
+                    <span class="dash-card-action">Explore <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+                <div class="dash-card premium-border" data-section="pyq">
+                    <div class="dash-card-icon c-bg-4"><i class="fa-solid fa-book-open-reader"></i></div>
+                    <h3> PYQ Solutions</h3>
+                    <p>Fully solved previous year question banks with step-by-step explanations.</p>
+                    <span class="dash-card-action highlight">Explore <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="premium.js"></script>
+</body>
+</html>
