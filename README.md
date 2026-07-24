@@ -1,4 +1,4 @@
-# Semester X
+# 🎓 Semester X
 
 > **A student-first platform designed to make semester preparation simpler, smarter, and more organized.**
 
