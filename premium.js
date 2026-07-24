@@ -4,7 +4,7 @@
      initTheme and isPremiumUser from script.js)
 ==========================================================*/
 
-const DEV_MODE = true;
+const DEV_MODE = false;
 document.addEventListener("DOMContentLoaded", () => {
 
     initPremiumDashboard();
