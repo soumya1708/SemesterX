@@ -144,7 +144,7 @@ Semester X is continuously evolving with new features, improvements, and optimiz
 
 This project is collaboratively developed by:
 
-* **Saket Govindam Shaw**
+* **Saket Gobindam Shaw**
 * **Swagata Debnath**
 * **Soumya Mondal**
 
