@@ -54,6 +54,8 @@ async function initializeApplication() {
 
     initEventListeners();
 
+    await waitForGoogleSDK();
+
     initializeGoogleSignIn();
 
     checkPersistentAuthStatus();
@@ -92,6 +94,37 @@ function startLoaderAnimation() {
         }, 500);
 
     }, 600);
+
+}
+/*==========================================================
+                WAIT FOR GOOGLE SDK
+==========================================================*/
+
+function waitForGoogleSDK() {
+
+    return new Promise(resolve => {
+
+        if (window.google) {
+
+            resolve();
+
+            return;
+
+        }
+
+        const interval = setInterval(() => {
+
+            if (window.google) {
+
+                clearInterval(interval);
+
+                resolve();
+
+            }
+
+        }, 100);
+
+    });
 
 }
 
@@ -854,7 +887,11 @@ function requireLogin(action) {
                 AUTH MODAL
 ==========================================================*/
 
-function openAuthModal() {
+async function openAuthModal() {
+
+    await waitForGoogleSDK();
+
+    initializeGoogleSignIn();
 
     const modal = document.getElementById("auth-modal");
 
