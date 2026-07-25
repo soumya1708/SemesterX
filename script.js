@@ -1288,22 +1288,100 @@ function createSubjectCard(subject) {
         document.createElement("div");
 
     card.className =
-        "subject-resource-card";
+        "resource-card";
 
     card.dataset.subjectName =
         subject.toLowerCase();
 
+    const currentCategory =
+        appState.activeResourceCategory;
+
+    let icon = "fa-book-open";
+    let badge = "NOTES";
+
+    if(currentCategory === "pyqs"){
+
+        icon = "fa-file-lines";
+        badge = "PYQ";
+
+    }
+
+    if(currentCategory === "organizers"){
+
+        icon = "fa-folder-tree";
+        badge = "ORGANIZER";
+
+    }
+
     card.innerHTML = `
 
-        <h3>
+        <div class="resource-top">
 
-            <i class="fa-solid fa-book-open"></i>
+            <div class="resource-icon">
+
+                <i class="fa-solid ${icon}"></i>
+
+            </div>
+
+            <span class="resource-type">
+
+                ${badge}
+
+            </span>
+
+        </div>
+
+        <h3 class="resource-title">
 
             ${subject}
 
         </h3>
 
-        ${generateActionButtons(subject)}
+        <p class="resource-sub">
+
+            High quality verified study material prepared for Semester ${appState.currentSem}.
+
+        </p>
+
+        <div class="resource-meta">
+
+            <span class="resource-chip">
+
+                ${appState.currentDept}
+
+            </span>
+
+            <span class="resource-chip">
+
+                Semester ${appState.currentSem}
+
+            </span>
+
+        </div>
+
+        <div class="resource-actions">
+
+            <button
+                class="btn btn-outline"
+                onclick="previewResource('${subject}')">
+
+                <i class="fa-solid fa-eye"></i>
+
+                Preview
+
+            </button>
+
+            <button
+                class="btn btn-primary"
+                onclick="downloadResource('${subject}')">
+
+                <i class="fa-solid fa-download"></i>
+
+                Download
+
+            </button>
+
+        </div>
 
     `;
 
@@ -2293,7 +2371,23 @@ window.addEventListener(
     }
 
 );
+function previewResource(subject){
 
+    showToast(
+        "Preview feature will be connected with backend soon.",
+        "info"
+    );
+
+}
+
+function downloadResource(subject){
+
+    showToast(
+        "Download feature will be connected with backend soon.",
+        "success"
+    );
+
+}
 
 /*==========================================================
                     END OF FILE
