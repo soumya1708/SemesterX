@@ -650,3 +650,209 @@ body {
     .resource-view-header { flex-direction: column; align-items: flex-start; }
     .search-box-container { max-width: 100%; }
 }
+/* ===========================================
+   RESOURCE FILTER BAR
+=========================================== */
+
+.resource-filter-bar{
+
+    display:flex;
+    gap:18px;
+    align-items:center;
+    margin:30px 0;
+    flex-wrap:wrap;
+
+}
+
+.filter-input{
+
+    flex:1;
+    min-width:280px;
+    position:relative;
+
+}
+
+.filter-input i{
+
+    position:absolute;
+    left:18px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#8b8b8b;
+
+}
+
+.filter-input input{
+
+    width:100%;
+    padding:14px 18px 14px 48px;
+    border:none;
+    border-radius:14px;
+    background:var(--card-bg);
+    box-shadow:0 6px 18px rgba(0,0,0,.06);
+    font-size:15px;
+
+}
+
+.resource-filter-bar select{
+
+    padding:14px 18px;
+    border:none;
+    border-radius:14px;
+    background:var(--card-bg);
+    box-shadow:0 6px 18px rgba(0,0,0,.06);
+    cursor:pointer;
+    font-size:15px;
+
+}
+
+/* ===========================================
+   RESOURCE GRID
+=========================================== */
+
+.resources-display-grid{
+
+    display:grid;
+
+    grid-template-columns:
+            repeat(auto-fill,minmax(330px,1fr));
+
+    gap:25px;
+
+}
+
+/* ===========================================
+   RESOURCE CARD
+=========================================== */
+
+.resource-card{
+
+    background:var(--card-bg);
+
+    border-radius:18px;
+
+    padding:24px;
+
+    transition:.3s;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    border:1px solid rgba(0,0,0,.04);
+
+}
+
+.resource-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 22px 45px rgba(0,0,0,.12);
+
+}
+
+.resource-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.resource-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:18px;
+
+    background:#eef4ff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    color:#4f46e5;
+
+}
+
+.resource-type{
+
+    background:#eef2ff;
+
+    color:#4338ca;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.resource-title{
+
+    margin-top:20px;
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+.resource-sub{
+
+    color:#777;
+
+    margin-top:6px;
+
+    line-height:1.6;
+
+}
+
+.resource-meta{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin:18px 0;
+
+}
+
+.resource-chip{
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:#f4f4f4;
+
+    font-size:13px;
+
+}
+
+.resource-actions{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:22px;
+
+}
+
+.resource-actions button{
+
+    flex:1;
+
+}
