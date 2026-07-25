@@ -225,6 +225,33 @@
             </div>
         </section>
 
+        <div class="resource-filter-bar">
+
+    <div class="filter-input">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+                type="text"
+                id="resource-search"
+                placeholder="Search notes, PYQs, organizers...">
+    </div>
+
+    <select id="subject-filter">
+
+        <option value="">All Subjects</option>
+
+    </select>
+
+    <select id="sort-filter">
+
+        <option value="latest">Latest First</option>
+
+        <option value="oldest">Oldest First</option>
+
+        <option value="name">A-Z</option>
+
+    </select>
+
+</div>
         <section id="resource-view" class="view">
             <div class="selection-container">
                 <button class="back-btn" onclick="navigateTo('dashboard-view')"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</button>
