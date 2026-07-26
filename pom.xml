@@ -15,6 +15,7 @@
     <groupId>com.semesterx</groupId>
     <artifactId>semesterx-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
     <name>semesterx-backend</name>
     <description>SemesterX Backend</description>
 
@@ -98,11 +99,23 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Google Auth Library -->
+        <!-- Google Authentication -->
         <dependency>
             <groupId>com.google.auth</groupId>
             <artifactId>google-auth-library-oauth2-http</artifactId>
             <version>1.40.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.api-client</groupId>
+            <artifactId>google-api-client</artifactId>
+            <version>2.8.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.http-client</groupId>
+            <artifactId>google-http-client-gson</artifactId>
+            <version>1.47.0</version>
         </dependency>
 
         <!-- Jackson -->
@@ -124,21 +137,10 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.google.api-client</groupId>
-            <artifactId>google-api-client</artifactId>
-            <version>2.8.1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.google.http-client</groupId>
-            <artifactId>google-http-client-gson</artifactId>
-            <version>1.47.0</version>
-        </dependency>
-
     </dependencies>
 
     <build>
+
         <plugins>
 
             <plugin>
@@ -149,17 +151,24 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+
                 <configuration>
+
                     <annotationProcessorPaths>
+
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
                         </path>
+
                     </annotationProcessorPaths>
+
                 </configuration>
+
             </plugin>
 
         </plugins>
+
     </build>
 
 </project>
