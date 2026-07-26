@@ -2380,6 +2380,16 @@ function downloadResource(subject){
     );
 
 }
+function openSubjectResources(subject){
+
+    appState.selectedSubject = subject;
+
+    alert(
+        "Opening resources for " + subject +
+        "\n\n(Next we'll replace this alert with the actual page.)"
+    );
+
+}
 
 /*==========================================================
                     END OF FILE
