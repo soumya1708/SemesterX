@@ -373,7 +373,68 @@
     </div>
 
     <button id="back-to-top" class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+    <div class="modal-overlay" id="pdf-preview-modal">
 
+    <div class="modal-card" style="max-width:900px;">
+        <button
+            class="close-modal-btn"
+            onclick="closePdfPreview()">
+
+            &times;
+
+        </button>
+
+        <h2 id="pdf-title">
+
+            PDF Preview
+
+        </h2>
+
+        <div
+            id="pdf-preview-body"
+            style="
+                margin-top:20px;
+                height:550px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                background:#f5f5f5;
+                border-radius:12px;
+            ">
+
+            <p>
+
+                PDF Preview will appear here.
+
+            </p>
+
+        </div>
+
+        <div
+            style="
+                display:flex;
+                justify-content:flex-end;
+                gap:15px;
+                margin-top:20px;
+            ">
+
+            <button
+                class="btn btn-outline"
+                onclick="closePdfPreview()">
+
+                Close
+
+            </button>
+
+            <button
+                class="btn btn-primary">
+
+                Download
+
+            </button>
+        </div>
+    </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
