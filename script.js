@@ -1360,26 +1360,18 @@ function createSubjectCard(subject) {
         </div>
 
         <div class="resource-actions">
-
-            <button
-                class="btn btn-outline"
-                onclick="previewResource('${subject}')">
-
-                <i class="fa-solid fa-eye"></i>
-
-                Preview
-
-            </button>
-
-            <button
-                class="btn btn-primary"
-                onclick="downloadResource('${subject}')">
-
-                <i class="fa-solid fa-download"></i>
-
-                Download
-
-            </button>
+        <button
+            class="btn btn-outline"
+            onclick="previewResource('${subject}')">
+            <i class="fa-solid fa-eye"></i>
+            Preview
+        </button>
+        <button
+           class="btn btn-primary"
+           onclick="openSubjectResources('${subject}')">
+           <i class="fa-solid fa-arrow-right"></i>
+           View Resources
+        </button>
 
         </div>
 
