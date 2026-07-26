@@ -18,11 +18,7 @@ const CONFIG = {
     subjects: {}
 
 };
-const API = {
 
-    BASE_URL: "http://localhost:8081/api"
-
-};
 
 /*==========================================================
                     APPLICATION STATE
@@ -74,9 +70,7 @@ async function sendContactMessage(event) {
 
     try {
 
-        const response = await fetch(
-            "http://localhost:8081/api/contact",
-            {
+        const response = awaitfetch(BACKEND_URL + "/api/contact", {
 
                 method: "POST",
 
