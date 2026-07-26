@@ -2384,10 +2384,121 @@ function openSubjectResources(subject){
 
     appState.selectedSubject = subject;
 
-    alert(
-        "Opening resources for " + subject +
-        "\n\n(Next we'll replace this alert with the actual page.)"
-    );
+    document.getElementById("subject-title").textContent = subject;
+
+    loadSubjectResources(subject);
+
+    navigateTo("subject-resource-view");
+
+}
+function loadSubjectResources(subject){
+
+    const container =
+        document.getElementById("subject-resource-grid");
+
+    container.innerHTML = "";
+
+    const demoResources = [
+
+        {
+            name: "Unit 1 Notes.pdf",
+            type: "PDF",
+            size: "2.3 MB"
+        },
+
+        {
+            name: "Unit 2 Notes.pdf",
+            type: "PDF",
+            size: "1.8 MB"
+        },
+
+        {
+            name: "Important Questions.pdf",
+            type: "PDF",
+            size: "950 KB"
+        },
+
+        {
+            name: "Formula Sheet.pdf",
+            type: "PDF",
+            size: "450 KB"
+        }
+
+    ];
+
+    demoResources.forEach(resource=>{
+
+        const card = document.createElement("div");
+
+        card.className = "resource-card";
+
+        card.innerHTML = `
+
+            <div class="resource-top">
+
+                <div class="resource-icon">
+
+                    <i class="fa-solid fa-file-pdf"></i>
+
+                </div>
+
+                <span class="resource-type">
+
+                    ${resource.type}
+
+                </span>
+
+            </div>
+
+            <h3 class="resource-title">
+
+                ${resource.name}
+
+            </h3>
+
+            <p class="resource-sub">
+
+                ${subject}
+
+            </p>
+
+            <div class="resource-meta">
+
+                <span class="resource-chip">
+
+                    ${resource.size}
+
+                </span>
+
+            </div>
+
+            <div class="resource-actions">
+
+                <button
+                    class="btn btn-outline">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    Preview
+
+                </button>
+
+                <button
+                    class="btn btn-primary">
+
+                    <i class="fa-solid fa-download"></i>
+
+                    Download
+
+                </button>
+
+            </div>
+
+        `;
+
+        container.appendChild(card);
+
+    });
 
 }
 
