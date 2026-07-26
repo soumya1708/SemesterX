@@ -2369,11 +2369,46 @@ function previewResource(subject){
         "pdf-title"
     ).textContent = subject;
 
+    document.getElementById(
+        "pdf-preview-body"
+    ).innerHTML = `
+
+        <div style="
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            height:100%;
+            gap:20px;
+        ">
+
+            <i class="fa-solid fa-file-pdf"
+               style="
+                    font-size:70px;
+                    color:#e53935;
+               ">
+
+            </i>
+
+            <h3>${subject}</h3>
+
+            <p>
+
+                PDF preview will be connected
+                to the backend soon.
+
+            </p>
+
+        </div>
+
+    `;
+
     document
         .getElementById("pdf-preview-modal")
         .classList.add("open");
 
 }
+
 function closePdfPreview(){
 
     document
@@ -2382,11 +2417,11 @@ function closePdfPreview(){
 
 }
 
-function downloadResource(subject){
+function downloadResource(fileName){
 
-    showToast(
-        "Download feature will be connected with backend soon.",
-        "success"
+    alert(
+        "Downloading:\n\n" + fileName +
+        "\n\nThis will download the real PDF after backend integration."
     );
 
 }
@@ -2494,12 +2529,10 @@ function loadSubjectResources(subject){
                 </button>
 
                 <button
-                    class="btn btn-primary">
-
+                    class="btn btn-primary"
+                    onclick="downloadResource('${resource.name}')">
                     <i class="fa-solid fa-download"></i>
-
                     Download
-
                 </button>
 
             </div>
