@@ -225,50 +225,45 @@
             </div>
         </section>
 
-        <div class="resource-filter-bar">
-
-    <div class="filter-input">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input
-                type="text"
-                id="resource-search"
-                placeholder="Search notes, PYQs, organizers...">
-    </div>
-
-    <select id="subject-filter">
-
-        <option value="">All Subjects</option>
-
-    </select>
-
-    <select id="sort-filter">
-
-        <option value="latest">Latest First</option>
-
-        <option value="oldest">Oldest First</option>
-
-        <option value="name">A-Z</option>
-
-    </select>
-
-</div>
+       
         <section id="resource-view" class="view">
             <div class="selection-container">
-                <button class="back-btn" onclick="navigateTo('dashboard-view')"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</button>
-                
+                <button class="back-btn"
+                    onclick="navigateTo('dashboard-view')">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to Dashboard
+                </button>
                 <div class="resource-view-header">
-                    <div>
-                        <h2 id="resource-view-title" class="view-title">Study Resources</h2>
-                        <p id="resource-view-desc" class="view-subtitle">Access your structural track files</p>
-                    </div>
-                    <div class="search-box-container">
-                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                        <input type="text" id="resource-search" placeholder="Search subjects...">
-                    </div>
+                    <h2 id="resource-view-title"
+                        class="view-title">
+                        📚 Study Resources
+                    </h2>
+                    <p id="resource-view-desc"
+                        class="view-subtitle">
+                        Access your verified study materials
+                    </p>
                 </div>
-
-                <div class="resources-display-grid" id="resources-cards-grid">
+                <div class="resource-filter-bar">
+                    <div class="filter-input">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                            type="text"
+                            id="resource-search"
+                            placeholder="Search Notes, PYQs, Organizers...">
                     </div>
+                    <select id="subject-filter">
+                        <option value="">All Subjects</option>
+                    </select>
+                    <select id="sort-filter">
+                        <option value="latest">Latest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="name">A-Z</option>
+                    </select>
+                </div>
+                <div
+                    class="resources-display-grid"
+                    id="resources-cards-grid">
+                </div>
             </div>
         </section>
 
