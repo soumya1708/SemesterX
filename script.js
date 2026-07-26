@@ -70,7 +70,7 @@ async function sendContactMessage(event) {
 
     try {
 
-        const response = awaitfetch(BACKEND_URL + "/api/contact", {
+        const response = await fetch(BACKEND_URL + "/api/contact", {
 
                 method: "POST",
 
