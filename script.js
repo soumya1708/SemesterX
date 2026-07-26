@@ -2365,10 +2365,20 @@ window.addEventListener(
 );
 function previewResource(subject){
 
-    showToast(
-        "Preview feature will be connected with backend soon.",
-        "info"
-    );
+    document.getElementById(
+        "pdf-title"
+    ).textContent = subject;
+
+    document
+        .getElementById("pdf-preview-modal")
+        .classList.add("open");
+
+}
+function closePdfPreview(){
+
+    document
+        .getElementById("pdf-preview-modal")
+        .classList.remove("open");
 
 }
 
