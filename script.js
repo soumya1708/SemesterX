@@ -44,6 +44,82 @@ let postAuthRedirectActionCallback = null;
 /*==========================================================
                     APPLICATION START
 ==========================================================*/
+const contactForm = document.getElementById("contact-form");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", sendContactMessage);
+
+}
+
+async function sendContactMessage(event) {
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("contact-name").value.trim();
+
+    const email =
+        document.getElementById("contact-email").value.trim();
+
+    const message =
+        document.getElementById("contact-message").value.trim();
+
+    if (!name || !email || !message) {
+
+        showToast("Please fill all fields.", "error");
+        return;
+
+    }
+
+    try {
+
+        const response = await fetch(
+            "http://localhost:8081/api/contact",
+            {
+
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+
+                    name,
+                    email,
+                    message
+
+                })
+
+            }
+        );
+
+        if (!response.ok) {
+
+            throw new Error("Failed");
+
+        }
+
+        showToast(
+            "Message sent successfully!",
+            "success"
+        );
+
+        contactForm.reset();
+
+    } catch (error) {
+
+        console.error(error);
+
+        showToast(
+            "Unable to send message.",
+            "error"
+        );
+
+    }
+
+}
 
 document.addEventListener("DOMContentLoaded", () => {
 
