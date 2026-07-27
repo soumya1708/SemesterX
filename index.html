@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SemesterX - Start Your Semester Preparation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <div id="g_id_onload"
+     data-client_id=611539225489-e1lc5hfodtp06sdro3s45dscnqprdgaj.apps.googleusercontent.com
+     data-callback="handleCredentialResponse"
+     data-auto_prompt="false">
+    </div>
+
+    <div class="loader-container" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="toast-container"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="navigateTo('landing-view')">
+                <i class="fa-solid fa-graduation-cap gradient-text-icon"></i>
+                <span>Semester<span class="accent-text">X</span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#" onclick="navigateTo('landing-view')">Home</a></li>
+                <li><a href="#features-section">Features</a></li>
+                <li><a href="#faq-section">FAQ</a></li>
+                <li><a href="#contact-section">Contact</a></li>
+                <li><button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme"><i class="fa-solid fa-moon"></i></button></li>
+                <li><button class="btn btn-outline" id="auth-nav-btn" onclick="handleNavbarAuthClick()">Login</button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="app-container">
+
+        <section id="landing-view" class="view active">
+            <div class="hero-section">
+                <div class="hero-bg-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                </div>
+                <div class="hero-content">
+                    <span class="badge">Your Academic Companion</span>
+                    <h1>Start Your <br><span class="gradient-text">Semester Preparation</span></h1>
+                    <p>Access high-quality engineered notes, previous year question banks, organized syllabus blueprints, and 1-on-1 personal mentorship custom curated for your university tracks.</p>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-lg" onclick="navigateTo('dept-view')">Start Preparation <i class="fa-solid fa-arrow-right"></i></button>
+                        <a href="#features-section" class="btn btn-secondary btn-lg">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="features-section" class="features-section">
+                <h2 class="section-title">Everything You Need To Ace Exams</h2>
+                <div class="features-grid">
+                    <div class="feat-card">
+                        <i class="fa-solid fa-book-open color-1"></i>
+                        <h3>Verified Notes</h3>
+                        <p>To-the-point structured study materials crafted by top rankers.</p>
+                    </div>
+                    <div class="feat-card">
+                        <i class="fa-solid fa-file-invoice color-2"></i>
+                        <h3>Comprehensive PYQs</h3>
+                        <p>Past 5 years solved university exam question papers sorted by subject.</p>
+                    </div>
+                    <div class="feat-card">
+                        <i class="fa-solid fa-folder-tree color-3"></i>
+                        <h3>Course Organizers</h3>
+                        <p>Syllabus structural deep dives, quick formula blueprints, and mind maps.</p>
+                    </div>
+                    <div class="feat-card">
+                        <i class="fa-solid fa-user-tie color-4"></i>
+                        <h3>1:1 Mentorship</h3>
+                        <p>Personal interactive strategic tracking and preparation guidelines.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="faq-section" class="faq-section">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">What is SemesterX? <i class="fa-solid fa-chevron-down"></i></div>
+                        <div class="faq-answer">SemesterX is a Semester Preparing platform for engineering students to easily streamline and organize structural university preparation content.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Is the resources section completely free? <i class="fa-solid fa-chevron-down"></i></div>
+                        <div class="faq-answer">Yes, all basic operational materials including structural notes, organizing patterns, and analytical PYQs are free after continuous login validation.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact-section" class="contact-section">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-card">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                id="contact-name"
+                                placeholder="Your Name"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                id="contact-email"
+                                placeholder="Your Email"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <textarea
+                                id="contact-message"
+                                placeholder="Your Message"
+                                rows="4"
+                                required></textarea>
+                        </div>
+                        <button
+                            type="submit"
+                            class="btn btn-primary">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="dept-view" class="view">
+            <div class="selection-container">
+                <button class="back-btn" onclick="navigateTo('landing-view')"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                <h2 class="view-title">Choose Your Department</h2>
+                <p class="view-subtitle">Select your academic stream to personalize your curriculum layout</p>
+                <div class="selection-grid" id="dept-grid">
+                    <div class="select-card" data-dept="CSE">
+                        <div class="select-icon color-1"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>Computer Science</h3>
+                        <p>CSE / AIML / DS / CSCS / CSBS / IOT</p>
+                    </div>
+                    <div class="select-card" data-dept="IT">
+                        <div class="select-icon color-2"><i class="fa-solid fa-network-wired"></i></div>
+                        <h3>Information Technology</h3>
+                        <p>IT / Software Systems Engineering</p>
+                    </div>
+                    <div class="select-card" data-dept="ECE">
+                        <div class="select-icon color-3"><i class="fa-solid fa-microchip"></i></div>
+                        <h3>Electronics & Comm.</h3>
+                        <p>ECE / ECS</p>
+                    </div>
+                    <div class="select-card" data-dept="EE">
+                        <div class="select-icon color-4"><i class="fa-solid fa-bolt"></i></div>
+                        <h3>Electrical Engineering</h3>
+                        <p>EE / EIE / EEE</p>
+                    </div>
+                    <div class="select-card" data-dept="ME">
+                        <div class="select-icon color-5"><i class="fa-solid fa-gears"></i></div>
+                        <h3>Mechanical Eng.</h3>
+                        <p>ME / Dynamics / Automation Control</p>
+                    </div>
+                    <div class="select-card" data-dept="CE">
+                        <div class="select-icon color-6"><i class="fa-solid fa-building-columns"></i></div>
+                        <h3>Civil Engineering</h3>
+                        <p>CE / Infrastructure / Structural Design</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sem-view" class="view">
+            <div class="selection-container">
+                <button class="back-btn" onclick="navigateTo('dept-view')"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                <h2 class="view-title">Choose Your Semester</h2>
+                <p class="view-subtitle">Select your continuous active curriculum term</p>
+                <div class="selection-grid dynamic-sem-grid">
+                    <div class="select-card sem-card" data-sem="1">
+                        <div class="select-icon color-primary"><i class="fa-solid fa-filter"></i></div>
+                        <h3>Semester 1</h3>
+                        <p>Initial Foundational Engineering Courses</p>
+                    </div>
+                    <div class="select-card sem-card" data-sem="2">
+                        <div class="select-icon color-accent"><i class="fa-solid fa-filter-circle-dollar"></i></div>
+                        <h3>Semester 2</h3>
+                        <p>Advanced Applied Stream Science Term</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dashboard-view" class="view">
+            <div class="dashboard-header">
+                <div class="dash-welcome">
+                    <button class="back-btn" onclick="navigateTo('dept-view')"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                    <h2 id="dashboard-welcome">
+                        Welcome Back, Explorer!
+                    </h2>
+                    <p>Here is your tailored curriculum ecosystem blueprint.</p>
+                </div>
+                <div class="dash-meta-pills">
+                    <span class="pill"><i class="fa-solid fa-network-wired"></i> Dept: <strong id="dash-dept-lbl">CSE</strong></span>
+                    <span class="pill"><i class="fa-solid fa-graduation-cap"></i> Sem: <strong id="dash-sem-lbl">1</strong></span>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="dash-card" onclick="handleDashboardResource('notes')">
+                    <div class="dash-card-icon c-bg-1"><i class="fa-solid fa-book-open"></i></div>
+                    <h3>Notes</h3>
+                    <p>Clean, beautifully structured chapter wise lecture blueprints and materials.</p>
+                    <span class="dash-card-action">Explore <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+                <div class="dash-card" onclick="handleDashboardResource('pyqs')">
+                    <div class="dash-card-icon c-bg-2"><i class="fa-solid fa-file-invoice"></i></div>
+                    <h3>Previous Year Questions</h3>
+                    <p>Past university question sets sorted meticulously with solution tags.</p>
+                    <span class="dash-card-action">Explore <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+                <div class="dash-card" onclick="handleDashboardResource('organizers')">
+                    <div class="dash-card-icon c-bg-3"><i class="fa-solid fa-folder-tree"></i></div>
+                    <h3>Organizers</h3>
+                    <p>Aggregated syllabus content maps, formula logs, and critical score charts.</p>
+                    <span class="dash-card-action">Explore <i class="fa-solid fa-chevron-right"></i></span>
+                </div>
+                <div class="dash-card premium-border" onclick="handleDashboardResource('mentorship')">
+                    <div class="dash-card-icon c-bg-4"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3>Premium Mentorship <span class="premium-badge">PRO</span></h3>
+                    <p>1-on-1 mapping, strategic roadmap checkpoints, and interview tracking charts.</p>
+                    <span class="dash-card-action highlight">Access Club <i class="fa-solid fa-crown"></i></span>
+                </div>
+            </div>
+        </section>
+
+       
+        <section id="resource-view" class="view">
+            <div class="selection-container">
+                <button class="back-btn"
+                    onclick="navigateTo('dashboard-view')">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to Dashboard
+                </button>
+                <div class="resource-view-header">
+                    <h2 id="resource-view-title"
+                        class="view-title">
+                        📚 Study Resources
+                    </h2>
+                    <p id="resource-view-desc"
+                        class="view-subtitle">
+                        Access your verified study materials
+                    </p>
+                </div>
+                <div class="resource-filter-bar">
+                    <div class="filter-input">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                            type="text"
+                            id="resource-search"
+                            placeholder="Search Notes, PYQs, Organizers...">
+                    </div>
+                    <select id="subject-filter">
+                        <option value="">All Subjects</option>
+                    </select>
+                    <select id="sort-filter">
+                        <option value="latest">Latest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="name">A-Z</option>
+                    </select>
+                </div>
+                <div
+                    class="resources-display-grid"
+                    id="resources-cards-grid">
+                </div>
+            </div>
+        </section>
+        <section id="subject-resource-view" class="view">
+            <div class="selection-container">
+                <button
+                    class="back-btn"
+                    onclick="navigateTo('resource-view')">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back to Subjects
+                </button>
+                <div class="resource-view-header">
+                    <h2
+                        id="subject-title"
+                        class="view-title">
+                        Subject
+                    </h2>
+                    <p class="view-subtitle">
+                        Browse all available study materials
+                    </p>
+                </div>
+                <div class="resource-filter-bar">
+                    <div class="filter-input">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                            id="subject-resource-search"
+                            type="text"
+                            placeholder="Search files...">
+                    </div>
+                </div>
+                <div
+                    id="subject-resource-grid"
+                    class="resources-display-grid">
+                </div>
+            </div>
+        </section>
+
+        <section id="mentorship-view" class="view">
+            <div class="selection-container">
+                <button class="back-btn" onclick="navigateTo('dashboard-view')"><i class="fa-solid fa-arrow-left"></i> Back to Dashboard</button>
+                
+                <div class="mentorship-premium-hero">
+                    <span class="premium-badge-large"><i class="fa-solid fa-crown"></i> Elite Access</span>
+                    <h2>Premium Mentorship Plan</h2>
+                    <p>Accelerate your growth blueprint with dedicated execution tracks overseen directly by industry mentors and academic veterans.</p>
+                </div>
+
+                <div class="mentorship-pricing-layout">
+                    <div class="mentorship-perks">
+                        <h3>What's included in Elite Tier:</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Personalized Interactive Route Mapping</li>
+                            <li><i class="fa-solid fa-circle-check"></i> High-yield Exam Prediction & Solving Strategies</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Direct Chat & Routine Reviews with Core Mentors</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Structured Placement & Core Domain Roadmap Planning</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Priority Ticket Support and Instant Revision access</li>
+                        </ul>
+                    </div>
+
+                    <div class="pricing-card" id="premium-pricing-box">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 SemesterX. Engineered meticulously for students.</p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="auth-modal">
+        <div class="modal-card">
+            <button class="close-modal-btn" onclick="closeAuthModal()">&times;</button>
+            <div class="auth-modal-content">
+                <div class="auth-icon-badge"><i class="fa-solid fa-lock"></i></div>
+                <h3>Login Required</h3>
+                <p>Please authenticate your session with your Google Workspace Account to safely download and bookmark verified engineering modules.</p>
+                <div id="google-signin-button"></div>
+                <span class="secure-footer-text"><i class="fa-solid fa-shield-halved"></i> Secured connection verification protocols active.</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="payment-modal">
+        <div class="modal-card">
+            <button class="close-modal-btn" onclick="closePaymentModal()">&times;</button>
+            <div class="payment-modal-content">
+                <h3>Secure Checkout</h3>
+                <p class="pay-item-title">Premium Mentorship Platform Plan</p>
+                <div class="price-pill">₹59 <span class="term">/ One-Time</span></div>
+                
+                <div class="payment-benefits-summary">
+                    <div><i class="fa-solid fa-check text-success"></i> Comprehensive Personal Guidance</div>
+                    <div><i class="fa-solid fa-check text-success"></i> Lifetime Architectural Track Access</div>
+                    <div><i class="fa-solid fa-check text-success"></i> Priority Execution Support</div>
+                </div>
+
+                <div class="payment-gateway-simulation-box" id="payment-gateway-body">
+                    <button class="btn btn-primary btn-full" id="payment-trigger-btn" onclick="simulatePaymentProcessing()">
+                        <i class="fa-solid fa-credit-card"></i> Proceed to Payment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
+    <div class="modal-overlay" id="pdf-preview-modal">
+
+    <div class="modal-card" style="max-width:900px;">
+        <button
+            class="close-modal-btn"
+            onclick="closePdfPreview()">
+
+            &times;
+
+        </button>
+
+        <h2 id="pdf-title">
+
+            PDF Preview
+
+        </h2>
+
+        <div
+            id="pdf-preview-body"
+            style="
+                margin-top:20px;
+                height:550px;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                background:#f5f5f5;
+                border-radius:12px;
+            ">
+
+            <p>
+
+                PDF Preview will appear here.
+
+            </p>
+
+        </div>
+
+        <div
+            style="
+                display:flex;
+                justify-content:flex-end;
+                gap:15px;
+                margin-top:20px;
+            ">
+
+            <button
+                class="btn btn-outline"
+                onclick="closePdfPreview()">
+
+                Close
+
+            </button>
+
+            <button
+                class="btn btn-primary">
+
+                Download
+
+            </button>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
