@@ -1,6 +1,5 @@
 package com.semesterx.semesterxbackend.security;
 
-import com.semesterx.semesterxbackend.repository.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -26,6 +25,17 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
         this.jwtService = jwtService;
         this.userDetailsService = userDetailsService;
+    }
+
+    @Override
+    protected boolean shouldNotFilter(HttpServletRequest request) {
+
+        String path = request.getServletPath();
+
+        return path.startsWith("/api/auth")
+                || path.startsWith("/api/contact")
+                || path.startsWith("/api/test")
+                || request.getMethod().equalsIgnoreCase("OPTIONS");
     }
 
     @Override
@@ -66,8 +76,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                                 .buildDetails(request)
                 );
 
-                SecurityContextHolder
-                        .getContext()
+                SecurityContextHolder.getContext()
                         .setAuthentication(authentication);
             }
         }

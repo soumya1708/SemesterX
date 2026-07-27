@@ -1,6 +1,5 @@
 package com.semesterx.semesterxbackend.controller;
 
-import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,7 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @GetMapping("/api/test")
-    public String test(Authentication authentication) {
-        return "Hello " + authentication.getName() + ", your JWT is working!";
+    public String test() {
+        return "Backend is working!";
     }
+
 }
