@@ -5,6 +5,7 @@ import com.semesterx.semesterxbackend.security.JwtAuthenticationFilter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
@@ -34,19 +35,23 @@ public class SecurityConfig {
                 // Disable CSRF
                 .csrf(csrf -> csrf.disable())
 
-                // Stateless JWT Session
+                // Stateless Session
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
 
-                // Return 401 instead of redirecting
+                // Handle Unauthorized Requests
                 .exceptionHandling(exception ->
                         exception.authenticationEntryPoint(authenticationEntryPoint)
                 )
 
-                // Public APIs
+                // Authorization Rules
                 .authorizeHttpRequests(auth -> auth
 
+                        // Allow all preflight CORS requests
+                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+
+                        // Public APIs
                         .requestMatchers(
                                 "/api/auth/**",
                                 "/api/contact",
@@ -56,7 +61,7 @@ public class SecurityConfig {
                                 "/api/resources/**"
                         ).permitAll()
 
-                        // Everything else requires login
+                        // Everything else requires authentication
                         .anyRequest().authenticated()
                 )
 
