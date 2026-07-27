@@ -90,9 +90,11 @@ async function sendContactMessage(event) {
         );
 
         if (!response.ok) {
-
-            throw new Error("Failed");
-
+          const errorText = await response.text();
+          console.error("Server Response:", errorText);
+          throw new Error(
+            "HTTP " + response.status + " : " + errorText
+          );
         }
 
         showToast(
@@ -103,14 +105,11 @@ async function sendContactMessage(event) {
         contactForm.reset();
 
     } catch (error) {
-
-        console.error(error);
-
-        showToast(
-            "Unable to send message.",
-            "error"
-        );
-
+      console.error("Contact API Error:", error);
+      showToast(
+        error.message,
+        "error"
+      );
     }
 
 }
@@ -1052,16 +1051,17 @@ function handleDashboardResource(category) {
 
 function getAuthHeaders() {
 
-    return {
-
-        "Authorization":
-            "Bearer " + getJwt(),
-
-        "Content-Type":
-            "application/json"
-
+    const headers = {
+        "Content-Type": "application/json"
     };
 
+    const jwt = getJwt();
+
+    if (jwt) {
+        headers.Authorization = "Bearer " + jwt;
+    }
+
+    return headers;
 }
 
 
@@ -1233,19 +1233,19 @@ async function testBackendConnection() {
 
     try {
 
-        const response = await apiGet(
-
-            "/api/test"
-
+        const response = await fetch(
+            BACKEND_URL + "/api/test"
         );
 
-        console.log(response);
+        const text = await response.text();
+
+        console.log("Backend:", text);
 
     }
 
     catch (error) {
 
-        console.error(error);
+        console.error("Backend connection failed:", error);
 
     }
 
