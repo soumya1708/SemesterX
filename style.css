@@ -571,7 +571,7 @@ body {
 }
 
 .resources-display-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px;
 }
 .subject-resource-card {
     background: var(--bg-surface); border: 1px solid var(--border-color);
@@ -788,10 +788,9 @@ body {
 
     display:grid;
 
-    grid-template-columns:
-            repeat(auto-fill,minmax(330px,1fr));
+    grid-template-columns: repeat(3,minmax(240px,1fr));
 
-    gap:25px;
+    gap:16px;
 
 }
 
@@ -803,13 +802,13 @@ body {
 
     background:var(--card-bg);
 
-    border-radius:18px;
+    border-radius:12px;
 
-    padding:24px;
+    padding:16px;
 
     transition:.3s;
 
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    box-shadow:0 10px 24px rgba(0,0,0,.06);
 
     border:1px solid rgba(0,0,0,.04);
 
@@ -835,13 +834,13 @@ body {
 
 .resource-icon{
 
-    width:60px;
+    width:48px;
 
-    height:60px;
+    height:48px;
 
-    border-radius:18px;
+    border-radius:12px;
 
-    background:#eef4ff;
+    background:#ffffff;
 
     display:flex;
 
@@ -849,9 +848,9 @@ body {
 
     align-items:center;
 
-    font-size:28px;
+    font-size:20px;
 
-    color:#4f46e5;
+    color:#0f172a;
 
 }
 
@@ -875,7 +874,7 @@ body {
 
     margin-top:20px;
 
-    font-size:20px;
+    font-size:16px;
 
     font-weight:700;
 
@@ -905,13 +904,13 @@ body {
 
 .resource-chip{
 
-    padding:8px 14px;
+    padding:6px 10px;
 
     border-radius:999px;
 
     background:#f4f4f4;
 
-    font-size:13px;
+    font-size:12px;
 
 }
 
