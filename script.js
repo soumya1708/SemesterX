@@ -1372,97 +1372,51 @@ function createSubjectCard(subject) {
         document.createElement("div");
 
     // Add both resource-card and subject-resource-card so filters target them correctly
-    card.className =
-        "resource-card subject-resource-card";
+card.className = "resource-card subject-resource-card";
+card.dataset.subjectName = subject.toLowerCase();
 
-    card.dataset.subjectName =
-        subject.toLowerCase();
+const currentCategory = appState.activeResourceCategory;
 
-    const currentCategory =
-        appState.activeResourceCategory;
+let icon = "fa-book-open";
+let badge = "NOTES";
 
-    let icon = "fa-book-open";
-    let badge = "NOTES";
+if (currentCategory === "pyqs") {
+    icon = "fa-file-lines";
+    badge = "PYQ";
+}
+if (currentCategory === "organizers") {
+    icon = "fa-folder-tree";
+    badge = "ORGANIZER";
+}
 
-    if(currentCategory === "pyqs"){
-
-        icon = "fa-file-lines";
-        badge = "PYQ";
-
-    }
-
-    if(currentCategory === "organizers"){
-
-        icon = "fa-folder-tree";
-        badge = "ORGANIZER";
-
-    }
-
-    card.innerHTML = `
-
-        <div class="resource-top">
-
-            <div class="resource-icon">
-
-                <i class="fa-solid ${icon}"></i>
-
-            </div>
-
-            <span class="resource-type">
-
-                ${badge}
-
-            </span>
-
+card.innerHTML = `
+    <div class="resource-top">
+        <div class="resource-icon">
+            <i class="fa-solid ${icon}"></i>
         </div>
+        <span class="resource-type">${badge}</span>
+    </div>
 
-        <h3 class="resource-title">
+    <h3 class="resource-title">${subject}</h3>
 
-            ${subject}
+    <p class="resource-sub">
+        High quality verified study material prepared for Semester ${appState.currentSem}.
+    </p>
 
-        </h3>
+    <div class="resource-meta">
+        <span class="resource-chip">${appState.currentDept}</span>
+        <span class="resource-chip">Semester ${appState.currentSem}</span>
+    </div>
 
-        <p class="resource-sub">
-
-            High quality verified study material prepared for Semester ${appState.currentSem}.
-
-        </p>
-
-        <div class="resource-meta">
-
-            <span class="resource-chip">
-
-                ${appState.currentDept}
-
-            </span>
-
-            <span class="resource-chip">
-
-                Semester ${appState.currentSem}
-
-            </span>
-
-        </div>
-
-        <div class="resource-actions">
-        <button
-            class="btn btn-outline"
-            onclick="previewResource('${subject}')">
-            <i class="fa-solid fa-eye"></i>
-            Preview
+    <div class="resource-actions">
+        <button class="btn btn-primary" onclick="openSubjectResources('${subject}')">
+            <i class="fa-solid fa-arrow-right"></i>
+            View Resources
         </button>
-        <button
-           class="btn btn-primary"
-           onclick="openSubjectResources('${subject}')">
-           <i class="fa-solid fa-arrow-right"></i>
-           View Resources
-        </button>
+    </div>
+`;
 
-        </div>
-
-    `;
-
-    container.appendChild(card);
+container.appendChild(card);
 
 }
 
