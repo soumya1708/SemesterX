@@ -372,7 +372,6 @@ function getCurrentUser() {
 function isLoggedIn() {
 
     return getJwt() !== null;
-
 }
 /*==========================================================
                 DASHBOARD WELCOME
@@ -652,7 +651,7 @@ function updateThemeIcon(theme) {
 
 
 /*==========================================================
-                    DEPARTMENT
+                     DEPARTMENT
 ==========================================================*/
 
 function initializeDepartmentCards() {
@@ -689,7 +688,7 @@ function initializeDepartmentCards() {
 
 
 /*==========================================================
-                    SEMESTER
+                     SEMESTER
 ==========================================================*/
 
 function initializeSemesterCards() {
@@ -732,7 +731,7 @@ function initializeSemesterCards() {
 
 
 /*==========================================================
-                    SEARCH
+                     SEARCH
 ==========================================================*/
 
 function initializeSearch() {
@@ -767,7 +766,7 @@ function initializeSearch() {
 
 
 /*==========================================================
-                    FAQ
+                     FAQ
 ==========================================================*/
 
 function initializeFAQ() {
@@ -822,7 +821,7 @@ function initializeFAQ() {
 
 
 /*==========================================================
-                BACK TO TOP
+                 BACK TO TOP
 ==========================================================*/
 
 function initializeBackToTop() {
@@ -879,7 +878,7 @@ function initializeBackToTop() {
 
 }
 /*==========================================================
-                AUTHENTICATION STATUS
+                 AUTHENTICATION STATUS
 ==========================================================*/
 
 function checkPersistentAuthStatus() {
@@ -917,7 +916,7 @@ function checkPersistentAuthStatus() {
 
 
 /*==========================================================
-                NAVBAR LOGIN BUTTON
+                 NAVBAR LOGIN BUTTON
 ==========================================================*/
 
 function handleNavbarAuthClick() {
@@ -936,7 +935,7 @@ function handleNavbarAuthClick() {
 
 
 /*==========================================================
-                    LOGIN REQUIRED
+                     LOGIN REQUIRED
 ==========================================================*/
 
 function requireLogin(action) {
@@ -957,7 +956,7 @@ function requireLogin(action) {
 
 
 /*==========================================================
-                AUTH MODAL
+                 AUTH MODAL
 ==========================================================*/
 
 async function openAuthModal() {
@@ -991,7 +990,7 @@ function closeAuthModal() {
 
 
 /*==========================================================
-                PAYMENT MODAL
+                 PAYMENT MODAL
 ==========================================================*/
 
 function openPaymentModal() {
@@ -1021,7 +1020,7 @@ function closePaymentModal() {
 
 
 /*==========================================================
-                DASHBOARD ACTIONS
+                 DASHBOARD ACTIONS
 ==========================================================*/
 
 function handleDashboardResource(category) {
@@ -1046,7 +1045,7 @@ function handleDashboardResource(category) {
 
 
 /*==========================================================
-                    API HELPERS
+                     API HELPERS
 ==========================================================*/
 
 function getAuthHeaders() {
@@ -1066,7 +1065,7 @@ function getAuthHeaders() {
 
 
 /*==========================================================
-                    GET REQUEST
+                     GET REQUEST
 ==========================================================*/
 
 async function apiGet(endpoint) {
@@ -1109,7 +1108,7 @@ async function apiGet(endpoint) {
 
 
 /*==========================================================
-                    POST REQUEST
+                     POST REQUEST
 ==========================================================*/
 
 async function apiPost(endpoint, body) {
@@ -1154,7 +1153,7 @@ async function apiPost(endpoint, body) {
 
 
 /*==========================================================
-                    PUT REQUEST
+                     PUT REQUEST
 ==========================================================*/
 
 async function apiPut(endpoint, body) {
@@ -1191,7 +1190,7 @@ async function apiPut(endpoint, body) {
 
 
 /*==========================================================
-                    DELETE REQUEST
+                     DELETE REQUEST
 ==========================================================*/
 
 async function apiDelete(endpoint) {
@@ -1226,7 +1225,7 @@ async function apiDelete(endpoint) {
 
 
 /*==========================================================
-                BACKEND CONNECTION TEST
+                 BACKEND CONNECTION TEST
 ==========================================================*/
 
 async function testBackendConnection() {
@@ -1251,7 +1250,7 @@ async function testBackendConnection() {
 
 }
 /*==========================================================
-                RESOURCE VIEW LOADER
+                 RESOURCE VIEW LOADER
 ==========================================================*/
 
 function loadResourceViewLayout(category) {
@@ -1299,7 +1298,7 @@ function loadResourceViewLayout(category) {
 
 
 /*==========================================================
-                SUBJECT CARDS
+                 SUBJECT CARDS
 ==========================================================*/
 
 function renderSubjectResourceCards() {
@@ -1314,8 +1313,19 @@ function renderSubjectResourceCards() {
     const semesterKey =
         "sem" + appState.currentSem;
 
-    const subjects =
+    let subjects =
         CONFIG.subjects[semesterKey] || [];
+
+    // Provide demo fallback subjects when backend hasn't supplied any
+    if (!subjects || subjects.length === 0) {
+        subjects = [
+            "Mathematics",
+            "Physics",
+            "Chemistry",
+            "Engineering Drawing",
+            "Basics of Programming"
+        ];
+    }
 
     if (subjects.length === 0) {
 
@@ -1361,8 +1371,9 @@ function createSubjectCard(subject) {
     const card =
         document.createElement("div");
 
+    // Add both resource-card and subject-resource-card so filters target them correctly
     card.className =
-        "resource-card";
+        "resource-card subject-resource-card";
 
     card.dataset.subjectName =
         subject.toLowerCase();
@@ -1560,10 +1571,11 @@ function filterSubjectCards(query){
     const search =
         query.toLowerCase();
 
+    // Target the subject cards (we add subject-resource-card class when creating them)
     document
 
         .querySelectorAll(
-            ".subject-resource-card"
+            ".resource-card.subject-resource-card"
         )
 
         .forEach(card=>{
@@ -2064,7 +2076,6 @@ async function verifyPayment(
 function simulatePaymentProcessing(){
 
     processPayment();
-
 }
 /*==========================================================
                 TOAST NOTIFICATIONS
@@ -2497,7 +2508,6 @@ function downloadResource(fileName){
         "Downloading:\n\n" + fileName +
         "\n\nThis will download the real PDF after backend integration."
     );
-
 }
 function openSubjectResources(subject){
 
