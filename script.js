@@ -52,64 +52,41 @@ async function sendContactMessage(event) {
 
     event.preventDefault();
 
-    const name =
-        document.getElementById("contact-name").value.trim();
+    const form = event.target;
 
-    const email =
-        document.getElementById("contact-email").value.trim();
-
-    const message =
-        document.getElementById("contact-message").value.trim();
+    const name = document.getElementById("contact-name").value.trim();
+    const email = document.getElementById("contact-email").value.trim();
+    const message = document.getElementById("contact-message").value.trim();
 
     if (!name || !email || !message) {
-
         showToast("Please fill all fields.", "error");
         return;
-
     }
 
     try {
 
-        const response = await fetch(BACKEND_URL + "/api/contact", {
-
-                method: "POST",
-
-                headers: {
-                    "Content-Type": "application/json"
-                },
-
-                body: JSON.stringify({
-
-                    name,
-                    email,
-                    message
-
-                })
-
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+                "Accept": "application/json"
             }
-        );
+        });
 
         if (!response.ok) {
-          const errorText = await response.text();
-          console.error("Server Response:", errorText);
-          throw new Error(
-            "HTTP " + response.status + " : " + errorText
-          );
+            throw new Error("Failed to send message.");
         }
 
-        showToast(
-            "Message sent successfully!",
-            "success"
-        );
+        showToast("Message sent successfully!", "success");
 
-        contactForm.reset();
+        form.reset();
 
     } catch (error) {
-      console.error("Contact API Error:", error);
-      showToast(
-        error.message,
-        "error"
-      );
+
+        console.error(error);
+
+        showToast("Unable to send message.", "error");
+
     }
 
 }
