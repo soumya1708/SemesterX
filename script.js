@@ -489,6 +489,33 @@ function navigateTo(viewId) {
     }
 
 }
+function goToHomeSection(sectionId) {
+
+    // First show the landing page
+    navigateTo("landing-view");
+
+    // Wait for the page to become visible
+    setTimeout(() => {
+
+        if (sectionId === "landing-view") {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+            return;
+        }
+
+        const section = document.getElementById(sectionId);
+
+        if (section) {
+            section.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+    }, 100);
+
+}
 
 
 /*==========================================================
