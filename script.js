@@ -9,6 +9,8 @@
 
 const BACKEND_URL = "https://semesterx-production.up.railway.app";
 
+const DEV_MODE = window.DEV_MODE || false;
+
 const CONFIG = {
 
     departments: [],
@@ -349,27 +351,42 @@ async function handleCredentialResponse(response) {
 
 function getJwt() {
 
-    return localStorage.getItem("jwt");
+    if (DEV_MODE) {
+        return "DEV_JWT";
+    }
 
+    return localStorage.getItem("jwt");
 }
 
 
 function getCurrentUser() {
 
-    const user = localStorage.getItem("user");
+    if (DEV_MODE) {
 
-    if (!user) {
-
-        return null;
+        return {
+            id: "developer",
+            name: "Developer",
+            email: "developer@semesterx.dev",
+            role: "PREMIUM"
+        };
 
     }
 
-    return JSON.parse(user);
+    const user = localStorage.getItem("user");
 
+    if (!user) {
+        return null;
+    }
+
+    return JSON.parse(user);
 }
 
 
 function isLoggedIn() {
+
+    if (DEV_MODE) {
+        return true;
+    }
 
     return getJwt() !== null;
 }
@@ -967,7 +984,7 @@ function handleNavbarAuthClick() {
 
 function requireLogin(action) {
 
-    if (isLoggedIn()) {
+    if (DEV_MODE || isLoggedIn()) {
 
         action();
 
