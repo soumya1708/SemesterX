@@ -50,48 +50,6 @@ if (contactForm) {
 
 }
 
-async function sendContactMessage(event) {
-
-    event.preventDefault();
-
-    const form = event.target;
-
-    const formData = new FormData(form);
-
-    try {
-
-        const response = await fetch(form.action, {
-            method: "POST",
-            body: formData,
-            headers: {
-                Accept: "application/json"
-            }
-        });
-
-        const result = await response.json();
-
-        if (result.success === "true" || result.success === true) {
-
-            showToast("Message sent successfully!", "success");
-
-            form.reset();
-
-        } else {
-
-            throw new Error("Submission failed");
-
-        }
-
-    } catch (error) {
-
-        console.error(error);
-
-        showToast("Unable to send message.", "error");
-
-    }
-
-}
-
 document.addEventListener("DOMContentLoaded", () => {
 
     initializeApplication();
