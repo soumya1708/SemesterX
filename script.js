@@ -2560,6 +2560,52 @@ function loadSubjectResources(subject){
     });
 
 }
+/*==========================================================
+                CONTACT FORM (FORMSPREE)
+==========================================================*/
+
+async function sendContactMessage(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const button = form.querySelector("button[type='submit']");
+
+    button.disabled = true;
+    button.innerHTML = "Sending...";
+
+    try {
+
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+
+        if (response.ok) {
+
+            form.reset();
+
+            showToast("✅ Message sent successfully!", "success");
+
+        } else {
+
+            showToast("❌ Unable to send message.", "error");
+
+        }
+
+    } catch (error) {
+
+        console.error(error);
+
+        showToast("❌ Unable to send message.", "error");
+
+    }
+
+    button.disabled = false;
+    button.innerHTML = "Send Message";
+}
 
 /*==========================================================
                     END OF FILE
