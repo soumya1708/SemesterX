@@ -1210,9 +1210,7 @@ async function testBackendConnection() {
 
     try {
 
-        const response = await fetch(
-            BACKEND_URL + "/api/test"
-        );
+        
 
         const text = await response.text();
 
