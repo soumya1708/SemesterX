@@ -56,32 +56,31 @@ async function sendContactMessage(event) {
 
     const form = event.target;
 
-    const name = document.getElementById("contact-name").value.trim();
-    const email = document.getElementById("contact-email").value.trim();
-    const message = document.getElementById("contact-message").value.trim();
-
-    if (!name || !email || !message) {
-        showToast("Please fill all fields.", "error");
-        return;
-    }
+    const formData = new FormData(form);
 
     try {
 
         const response = await fetch(form.action, {
             method: "POST",
-            body: new FormData(form),
+            body: formData,
             headers: {
-                "Accept": "application/json"
+                Accept: "application/json"
             }
         });
 
-        if (!response.ok) {
-            throw new Error("Failed to send message.");
+        const result = await response.json();
+
+        if (result.success === "true" || result.success === true) {
+
+            showToast("Message sent successfully!", "success");
+
+            form.reset();
+
+        } else {
+
+            throw new Error("Submission failed");
+
         }
-
-        showToast("Message sent successfully!", "success");
-
-        form.reset();
 
     } catch (error) {
 
