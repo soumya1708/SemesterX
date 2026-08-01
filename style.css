@@ -1057,3 +1057,34 @@ body {
     cursor:pointer;
 
 }
+.department-search{
+    max-width:700px;
+    margin:35px auto;
+    position:relative;
+}
+
+.department-search input{
+    width:100%;
+    padding:16px 20px 16px 55px;
+    border-radius:16px;
+    border:2px solid rgba(255,255,255,.08);
+    background:#18233b;
+    color:#fff;
+    font-size:1rem;
+    outline:none;
+    transition:.3s;
+}
+
+.department-search input:focus{
+    border-color:#4f8cff;
+    box-shadow:0 0 0 3px rgba(79,140,255,.2);
+}
+
+.department-search i{
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#9ca3af;
+    font-size:18px;
+}
