@@ -1,2 +1,2 @@
 // dev-config.js
-window.DEV_MODE = true;
+window.DEV_MODE = false;
