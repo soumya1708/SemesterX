@@ -483,7 +483,7 @@ function initEventListeners() {
     initializeDepartmentCards();
 
     initializeSemesterCards();
-
+    initializeDepartmentSearch();
     initializeSearch();
 
     initializeFAQ();
@@ -665,6 +665,36 @@ function initializeDepartmentCards() {
 
 }
 
+function initializeDepartmentSearch() {
+
+    const input = document.getElementById("department-search");
+
+    if (!input) return;
+
+    input.addEventListener("input", function () {
+
+        const query = this.value.toLowerCase();
+
+        document.querySelectorAll("#dept-grid .select-card").forEach(card => {
+
+            const deptName = card.querySelector("h3").textContent.toLowerCase();
+
+            const deptDesc = card.querySelector("p").textContent.toLowerCase();
+
+            if (
+                deptName.includes(query) ||
+                deptDesc.includes(query)
+            ) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+
+}
 
 /*==========================================================
                      SEMESTER
