@@ -228,6 +228,7 @@ async function handleCredentialResponse(response) {
         }
 
         const data = await result.json();
+        console.log("Backend Response:", data);
 
         localStorage.setItem("jwt", data.token);
 
