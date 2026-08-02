@@ -426,21 +426,25 @@ function navigateTo(viewId) {
 
     updateDashboardWelcome();
     }
-
+    if (viewId === "resource-view") {
+      document.getElementById("resource-dept-lbl").textContent =
+        appState.currentDept;
+      document.getElementById("resource-sem-lbl").textContent =
+        appState.currentSem;
+    }
+    if (viewId === "subject-resource-view") {
+      document.getElementById("subject-dept-lbl").textContent =
+        appState.currentDept;
+      document.getElementById("subject-sem-lbl").textContent =
+        appState.currentSem;
+    }
     if (viewId === "mentorship-view") {
-
-        renderMentorshipPricingCard();
-
+      renderMentorshipPricingCard();
     }
-
     const nav = document.getElementById("nav-links");
-
     if (nav) {
-
         nav.classList.remove("open");
-
     }
-
 }
 function goToHomeSection(sectionId) {
 
