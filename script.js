@@ -2540,6 +2540,7 @@ function loadSubjectResources(subject){
     // ---------------- NOTES ----------------
 
     if(appState.activeResourceCategory === "notes"){
+       // ---------- Physics 1(BS-PH101)----------
       if(subject.includes("Physics")){
         demoResources = [
           { name:"Mechanics Notes.pdf", type:"PDF", size:"2.3 MB" },
@@ -2548,6 +2549,32 @@ function loadSubjectResources(subject){
           { name:"Dielectric & Magnetic Properties of Materials Notes.pdf", type:"PDF", size:"1.9 MB" },
           { name:"Quantum Mechanics Notes.pdf", type:"PDF", size:"2.0 MB" },
           { name:"Statistical Mechanics Notes.pdf", type:"PDF", size:"1.8 MB" },
+          { name:"Important Questions.pdf", type:"PDF", size:"950 KB" },
+          { name:"Formula Sheet.pdf", type:"PDF", size:"450 KB" }
+        ];
+      }
+      // ---------- Mathematics-1A (BS-M101)----------
+      else if(subject.includes("Mathematics")){
+
+        demoResources = [
+
+            { name:"Calculus (Integration) Notes.pdf", type:"PDF", size:"2.3 MB" },
+            { name:"Calculus (Differentiation) Notes.pdf", type:"PDF", size:"2.2 MB" },
+            { name:"Matrices Notes.pdf", type:"PDF", size:"2.0 MB" },
+            { name:"Vector Spaces Notes.pdf", type:"PDF", size:"1.9 MB" },
+            { name:"Important Questions.pdf", type:"PDF", size:"950 KB" },
+            { name:"Formula Sheet.pdf", type:"PDF", size:"450 KB" }
+        ];
+      }
+      // ---------- Basic Electrical Engineering (ES-EE101)----------
+      else if(subject.includes("Electrical")){
+        demoResources = [
+          { name:"DC Circuits Notes.pdf", type:"PDF", size:"2.3 MB" },
+          { name:"AC Circuits Notes.pdf", type:"PDF", size:"2.2 MB" },
+          { name:"Transformers Notes.pdf", type:"PDF", size:"2.1 MB" },
+          { name:"Electrical Machines Notes.pdf", type:"PDF", size:"2.0 MB" },
+          { name:"Power Converters Notes.pdf", type:"PDF", size:"1.9 MB" },
+          { name:"Electrical Installation Notes.pdf", type:"PDF", size:"1.8 MB" },
           { name:"Important Questions.pdf", type:"PDF", size:"950 KB" },
           { name:"Formula Sheet.pdf", type:"PDF", size:"450 KB" }
         ];
