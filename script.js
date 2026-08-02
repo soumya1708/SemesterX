@@ -2504,33 +2504,86 @@ function loadSubjectResources(subject){
 
     container.innerHTML = "";
 
-    const demoResources = [
+    let demoResources = [];
 
-        {
-            name: "Unit 1 Notes.pdf",
-            type: "PDF",
-            size: "2.3 MB"
-        },
+    // ---------------- NOTES ----------------
 
-        {
-            name: "Unit 2 Notes.pdf",
-            type: "PDF",
-            size: "1.8 MB"
-        },
+    if(appState.activeResourceCategory === "notes"){
 
-        {
-            name: "Important Questions.pdf",
-            type: "PDF",
-            size: "950 KB"
-        },
+        demoResources = [
 
-        {
-            name: "Formula Sheet.pdf",
-            type: "PDF",
-            size: "450 KB"
-        }
+            {
+                name: "Unit 1 Notes.pdf",
+                type: "PDF",
+                size: "2.3 MB"
+            },
 
-    ];
+            {
+                name: "Unit 2 Notes.pdf",
+                type: "PDF",
+                size: "1.8 MB"
+            },
+
+            {
+                name: "Important Questions.pdf",
+                type: "PDF",
+                size: "950 KB"
+            },
+
+            {
+                name: "Formula Sheet.pdf",
+                type: "PDF",
+                size: "450 KB"
+            }
+
+        ];
+
+    }
+
+    // ---------------- PYQS ----------------
+
+    else if(appState.activeResourceCategory === "pyqs"){
+
+        demoResources = [
+
+            { name:"2018 PYQ.pdf", type:"PDF", size:"1.2 MB" },
+            { name:"2019 PYQ.pdf", type:"PDF", size:"1.3 MB" },
+            { name:"2022 PYQ.pdf", type:"PDF", size:"1.1 MB" },
+            { name:"2023 PYQ.pdf", type:"PDF", size:"1.4 MB" },
+            { name:"2024 PYQ.pdf", type:"PDF", size:"1.5 MB" },
+            { name:"2025 PYQ.pdf", type:"PDF", size:"1.6 MB" }
+
+        ];
+
+    }
+
+    // ---------------- ORGANIZERS ----------------
+
+    else{
+
+        demoResources = [
+
+            {
+                name:"Formula Sheet.pdf",
+                type:"PDF",
+                size:"450 KB"
+            },
+
+            {
+                name:"Mind Map.pdf",
+                type:"PDF",
+                size:"620 KB"
+            },
+
+            {
+                name:"Revision Sheet.pdf",
+                type:"PDF",
+                size:"800 KB"
+            }
+
+        ];
+
+    }
 
     demoResources.forEach(resource=>{
 
