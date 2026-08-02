@@ -2540,35 +2540,18 @@ function loadSubjectResources(subject){
     // ---------------- NOTES ----------------
 
     if(appState.activeResourceCategory === "notes"){
-
+      if(subject.includes("Physics")){
         demoResources = [
-
-            {
-                name: "Unit 1 Notes.pdf",
-                type: "PDF",
-                size: "2.3 MB"
-            },
-
-            {
-                name: "Unit 2 Notes.pdf",
-                type: "PDF",
-                size: "1.8 MB"
-            },
-
-            {
-                name: "Important Questions.pdf",
-                type: "PDF",
-                size: "950 KB"
-            },
-
-            {
-                name: "Formula Sheet.pdf",
-                type: "PDF",
-                size: "450 KB"
-            }
-
+          { name:"Mechanics Notes.pdf", type:"PDF", size:"2.3 MB" },
+          { name:"Optics Notes.pdf", type:"PDF", size:"2.1 MB" },
+          { name:"Electromagnetism Notes.pdf", type:"PDF", size:"2.4 MB" },
+          { name:"Dielectric & Magnetic Properties of Materials Notes.pdf", type:"PDF", size:"1.9 MB" },
+          { name:"Quantum Mechanics Notes.pdf", type:"PDF", size:"2.0 MB" },
+          { name:"Statistical Mechanics Notes.pdf", type:"PDF", size:"1.8 MB" },
+          { name:"Important Questions.pdf", type:"PDF", size:"950 KB" },
+          { name:"Formula Sheet.pdf", type:"PDF", size:"450 KB" }
         ];
-
+      }
     }
 
     // ---------------- PYQS ----------------
