@@ -1327,13 +1327,11 @@ function renderSubjectResourceCards() {
 
     // Provide demo fallback subjects when backend hasn't supplied any
     if (!subjects || subjects.length === 0) {
-        subjects = [
-            "Mathematics",
-            "Physics",
-            "Chemistry",
-            "Engineering Drawing",
-            "Basics of Programming"
-        ];
+      subjects = [
+        "Mathematics",
+        "Physics",
+        "Basic Electrical Engineering"
+      ];
     }
 
     if (subjects.length === 0) {
