@@ -1327,20 +1327,21 @@ function renderSubjectResourceCards() {
 
     // Provide demo fallback subjects when backend hasn't supplied any
     if (!subjects || subjects.length === 0) {
-      if (selectedDepartment === "IT") {
+      if (appState.currentDept === "IT") {
         subjects = [
           "Mathematics I (BS-M101)",
           "Physics I (BS-PH101)",
           "Basic Electrical Engineering (ES-EE101)"
         ];
-      } else if (selectedDepartment === "ME") {
+      }
+      else if (appState.currentDept === "ME") {
         subjects = [
           "Physics I (BS-PH101)",
           "Mathematics I (BS-M102)",
           "Basic Electrical Engineering (ES-EE101)"
         ];
-      } else {
-        // Default subjects for other branches
+      }
+      else {
         subjects = [
           "Mathematics I (BS-M101)",
           "Physics I (BS-PH101)",
