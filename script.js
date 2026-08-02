@@ -1327,33 +1327,27 @@ function renderSubjectResourceCards() {
 
     // Provide demo fallback subjects when backend hasn't supplied any
     if (!subjects || subjects.length === 0) {
-
-    if (selectedDepartment === "IT") {
-
+      if (selectedDepartment === "IT") {
         subjects = [
-            "Mathematics I (BS-M101)",
-            "Physics I (BS-PH101)",
-            "Basic Electrical Engineering (ES-EE101)"
+          "Mathematics I (BS-M101)",
+          "Physics I (BS-PH101)",
+          "Basic Electrical Engineering (ES-EE101)"
         ];
-
-    } else if (selectedDepartment === "ME") {
-
+      } else if (selectedDepartment === "ME") {
         subjects = [
-            "Physics I (BS-PH101)",
-            "Mathematics I (BS-M102)",
-            "Basic Electrical Engineering (ES-EE101)"
+          "Physics I (BS-PH101)",
+          "Mathematics I (BS-M102)",
+          "Basic Electrical Engineering (ES-EE101)"
         ];
-
-    } else {
-
+      } else {
         // Default subjects for other branches
         subjects = [
-            "Mathematics I (BS-M101)",
-            "Physics I (BS-PH101)",
-            "Basic Electrical Engineering (ES-EE101)"
+          "Mathematics I (BS-M101)",
+          "Physics I (BS-PH101)",
+          "Basic Electrical Engineering (ES-EE101)"
         ];
+      }
     }
-}
 
     if (subjects.length === 0) {
 
