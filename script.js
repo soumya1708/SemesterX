@@ -62,6 +62,7 @@ async function initializeApplication() {
     initTheme();
 
     initEventListeners();
+    initializeSubjectResourceSearch();
 
     await waitForGoogleSDK();
 
@@ -468,7 +469,37 @@ function goToHomeSection(sectionId) {
     }, 100);
 
 }
+function initializeSubjectResourceSearch(){
 
+    const search =
+        document.getElementById(
+            "subject-resource-search"
+        );
+
+    if(!search) return;
+
+    search.addEventListener("input", function(){
+
+        const query =
+            this.value.toLowerCase();
+
+        document
+            .querySelectorAll("#subject-resource-grid .resource-card")
+            .forEach(card=>{
+
+                const name =
+                    card.dataset.resourceName;
+
+                card.style.display =
+                    name.includes(query)
+                    ? ""
+                    : "none";
+
+            });
+
+    });
+
+}
 
 /*==========================================================
                     EVENT LISTENERS
@@ -2590,7 +2621,7 @@ function loadSubjectResources(subject){
         const card = document.createElement("div");
 
         card.className = "resource-card";
-
+        card.dataset.resourceName = resource.name.toLowerCase();
         card.innerHTML = `
 
             <div class="resource-top">
