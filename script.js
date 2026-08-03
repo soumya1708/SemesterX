@@ -2460,43 +2460,18 @@ window.addEventListener(
     }
 
 );
-function previewResource(subject){
+function previewResource(previewUrl, title){
 
-    document.getElementById(
-        "pdf-title"
-    ).textContent = subject;
+    document.getElementById("pdf-title").textContent = title;
 
-    document.getElementById(
-        "pdf-preview-body"
-    ).innerHTML = `
+    document.getElementById("pdf-preview-body").innerHTML = `
 
-        <div style="
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            justify-content:center;
-            height:100%;
-            gap:20px;
-        ">
-
-            <i class="fa-solid fa-file-pdf"
-               style="
-                    font-size:70px;
-                    color:#e53935;
-               ">
-
-            </i>
-
-            <h3>${subject}</h3>
-
-            <p>
-
-                PDF preview will be connected
-                to the backend soon.
-
-            </p>
-
-        </div>
+        <iframe
+            src="${previewUrl}"
+            width="100%"
+            height="600"
+            style="border:none;border-radius:12px;">
+        </iframe>
 
     `;
 
@@ -2514,12 +2489,10 @@ function closePdfPreview(){
 
 }
 
-function downloadResource(fileName){
+function downloadResource(downloadUrl){
 
-    alert(
-        "Downloading:\n\n" + fileName +
-        "\n\nThis will download the real PDF after backend integration."
-    );
+    window.open(downloadUrl, "_blank");
+
 }
 function openSubjectResources(subject){
 
@@ -2586,22 +2559,59 @@ function loadSubjectResources(subject){
     }
 
     // ---------------- PYQS ----------------
-
     else if(appState.activeResourceCategory === "pyqs"){
-
+      // ---------- Basic Electrical Engineering ----------
+      if(subject.includes("Electrical")){
         demoResources = [
+          {
+            name:"2019 PYQ.pdf",
+            type:"PDF",
+            size:"195 KB",
+            preview:"https://drive.google.com/file/d/1yqkUU43w77lYlw527kgQwhOjJw0DnRDO/preview",
+            download:"https://drive.google.com/uc?export=download&id=1yqkUU43w77lYlw527kgQwhOjJw0DnRDO"
+          },
 
-            { name:"2018 PYQ.pdf", type:"PDF", size:"1.2 MB" },
-            { name:"2019 PYQ.pdf", type:"PDF", size:"1.3 MB" },
-            { name:"2022 PYQ.pdf", type:"PDF", size:"1.1 MB" },
-            { name:"2023 PYQ.pdf", type:"PDF", size:"1.4 MB" },
-            { name:"2024 PYQ.pdf", type:"PDF", size:"1.5 MB" },
-            { name:"2025 PYQ.pdf", type:"PDF", size:"1.6 MB" }
+          {
+            name:"2020 PYQ.pdf",
+            type:"PDF",
+            size:"148 KB",
+            preview:"https://drive.google.com/file/d/1H2V9qZjxpUaIvmpdJvrFwY1EFZJA4fwg/preview",
+            download:"https://drive.google.com/uc?export=download&id=1H2V9qZjxpUaIvmpdJvrFwY1EFZJA4fwg"
+          },
 
+          {
+            name:"2023 PYQ.pdf",
+            type:"PDF",
+            size:"70 KB",
+            preview:"https://drive.google.com/file/d/1GzCt-fKF6bLNj0tvHUs6BTONYOfvSxTe/preview",
+            download:"https://drive.google.com/uc?export=download&id=1GzCt-fKF6bLNj0tvHUs6BTONYOfvSxTe"
+          },
+          {
+            name:"2024 PYQ.pdf",
+            type:"PDF",
+            size:"72 KB",
+            preview:"https://drive.google.com/file/d/1DwMckKmWilkyy1Ngs175KymU41RQ9hMw/preview",
+            download:"https://drive.google.com/uc?export=download&id=1DwMckKmWilkyy1Ngs175KymU41RQ9hMw"
+          },
+          {
+            name:"2025 PYQ.pdf",
+            type:"PDF",
+            size:"90 KB",
+            preview:"https://drive.google.com/file/d/1bQRj55eAzui0btnsRCb1yjHYcivbt5qI/preview",
+            download:"https://drive.google.com/uc?export=download&id=1bQRj55eAzui0btnsRCb1yjHYcivbt5qI"
+          }
         ];
-
+      }
+      else{
+        demoResources = [
+          {
+            name:"Coming Soon",
+            type:"PDF",
+            size:"--"
+          }
+        ];
+      }
     }
-
     // ---------------- ORGANIZERS ----------------
 
     else{
@@ -2679,17 +2689,15 @@ function loadSubjectResources(subject){
             <div class="resource-actions">
 
                 <button
-                    class="btn btn-outline">
-
+                    class="btn btn-outline"
+                    onclick="${resource.preview ? `previewResource('${resource.preview}','${resource.name}')` : `showToast('PYQs will be uploaded soon.','info')`}">
                     <i class="fa-solid fa-eye"></i>
-
                     Preview
-
                 </button>
 
                 <button
                     class="btn btn-primary"
-                    onclick="downloadResource('${resource.name}')">
+                    onclick="${resource.download ? `downloadResource('${resource.download}')` : `showToast('Download will be available soon.','info')`}">
                     <i class="fa-solid fa-download"></i>
                     Download
                 </button>
