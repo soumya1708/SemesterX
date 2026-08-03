@@ -1368,7 +1368,7 @@ function renderSubjectResourceCards() {
 
             if (appState.currentDept === "IT") {
                 subjects = [
-                    "Mathematics I (BS-M101)",
+                    "Mathematics IA (BS-M101)",
                     "Physics I (BS-PH101)",
                     "Basic Electrical Engineering (ES-EE101)"
                 ];
