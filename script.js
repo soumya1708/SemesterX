@@ -2627,6 +2627,46 @@ function loadSubjectResources(subject){
           { name:"Formula Sheet.pdf", type:"PDF", size:"450 KB" }
         ];
       }
+      // ---------- English (HM-HU201) ---------
+      else if(subject.includes("English")){
+        demoResources = [
+          {
+            name:"Vocabulary Building Notes.pdf",
+            type:"PDF",
+            size:"2.1 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Basic Writing Skills Notes.pdf",
+            type:"PDF",
+            size:"2.0 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Identify Common Errors in Writing Notes.pdf",
+            type:"PDF",
+            size:"1.8 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Nature and Style of Sensible Writing Notes.pdf",
+            type:"PDF",
+            size:"2.2 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Writing Practices Notes.pdf",
+            type:"PDF",
+            size:"1.9 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          }
+        ];
+      }
     }
 
     // ---------------- PYQS ----------------
