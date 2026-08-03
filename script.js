@@ -2491,7 +2491,20 @@ function closePdfPreview(){
 
 function downloadResource(downloadUrl){
 
-    window.open(downloadUrl, "_blank");
+    showLoader("Preparing Download...");
+
+    setTimeout(()=>{
+
+        hideLoader();
+
+        window.open(downloadUrl,"_blank");
+
+        showToast(
+            "Download Started!",
+            "success"
+        );
+
+    },1800);
 
 }
 function openSubjectResources(subject){
