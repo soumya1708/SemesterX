@@ -2713,6 +2713,55 @@ function loadSubjectResources(subject){
           }
         ];
       }
+      // ---------- Mathematics IIA (BS-M201) ----------
+      else if(subject.includes("Mathematics IIA")){
+        demoResources = [
+          {
+            name:"Basic Probability Notes.pdf",
+            type:"PDF",
+            size:"2.2 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+
+          {
+            name:"Continuous Probability Distribution Notes.pdf",
+            type:"PDF",
+            size:"2.3 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+
+          {
+            name:"Bivariate Distribution Notes.pdf",
+            type:"PDF",
+            size:"2.1 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Basic Statistics Notes.pdf",
+            type:"PDF",
+            size:"2.0 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Applied Statistics Notes.pdf",
+            type:"PDF",
+            size:"2.1 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Small Samples Notes.pdf",
+            type:"PDF",
+            size:"1.9 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          }
+        ];
+      }
       else{
         demoResources = [
           {
