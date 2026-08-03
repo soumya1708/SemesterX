@@ -2602,7 +2602,7 @@ function loadSubjectResources(subject){
         ];
       }
       // ---------- Mathematics-1A (BS-M101)----------
-      else if(subject.includes("Mathematics")){
+      else if(subject.includes("Mathematics IA")){
 
         demoResources = [
 
@@ -2625,6 +2625,55 @@ function loadSubjectResources(subject){
           { name:"Electrical Installation Notes.pdf", type:"PDF", size:"1.8 MB" },
           { name:"Important Questions.pdf", type:"PDF", size:"950 KB" },
           { name:"Formula Sheet.pdf", type:"PDF", size:"450 KB" }
+        ];
+      }
+      // ---------- Mathematics IIA (BS-M201) ----------
+      else if(subject.includes("Mathematics IIA")){
+        demoResources = [
+          {
+            name:"Basic Probability Notes.pdf",
+            type:"PDF",
+            size:"2.2 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+
+          {
+            name:"Continuous Probability Distribution Notes.pdf",
+            type:"PDF",
+            size:"2.3 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+
+          {
+            name:"Bivariate Distribution Notes.pdf",
+            type:"PDF",
+            size:"2.1 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Basic Statistics Notes.pdf",
+            type:"PDF",
+            size:"2.0 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Applied Statistics Notes.pdf",
+            type:"PDF",
+            size:"2.1 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Small Samples Notes.pdf",
+            type:"PDF",
+            size:"1.9 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          }
         ];
       }
       // ---------- English (HM-HU201) ---------
@@ -2710,55 +2759,6 @@ function loadSubjectResources(subject){
             size:"90 KB",
             preview:"https://drive.google.com/file/d/1bQRj55eAzui0btnsRCb1yjHYcivbt5qI/preview",
             download:"https://drive.google.com/uc?export=download&id=1bQRj55eAzui0btnsRCb1yjHYcivbt5qI"
-          }
-        ];
-      }
-      // ---------- Mathematics IIA (BS-M201) ----------
-      else if(subject.includes("Mathematics IIA")){
-        demoResources = [
-          {
-            name:"Basic Probability Notes.pdf",
-            type:"PDF",
-            size:"2.2 MB",
-            preview:"YOUR_PREVIEW_LINK",
-            download:"YOUR_DOWNLOAD_LINK"
-          },
-
-          {
-            name:"Continuous Probability Distribution Notes.pdf",
-            type:"PDF",
-            size:"2.3 MB",
-            preview:"YOUR_PREVIEW_LINK",
-            download:"YOUR_DOWNLOAD_LINK"
-          },
-
-          {
-            name:"Bivariate Distribution Notes.pdf",
-            type:"PDF",
-            size:"2.1 MB",
-            preview:"YOUR_PREVIEW_LINK",
-            download:"YOUR_DOWNLOAD_LINK"
-          },
-          {
-            name:"Basic Statistics Notes.pdf",
-            type:"PDF",
-            size:"2.0 MB",
-            preview:"YOUR_PREVIEW_LINK",
-            download:"YOUR_DOWNLOAD_LINK"
-          },
-          {
-            name:"Applied Statistics Notes.pdf",
-            type:"PDF",
-            size:"2.1 MB",
-            preview:"YOUR_PREVIEW_LINK",
-            download:"YOUR_DOWNLOAD_LINK"
-          },
-          {
-            name:"Small Samples Notes.pdf",
-            type:"PDF",
-            size:"1.9 MB",
-            preview:"YOUR_PREVIEW_LINK",
-            download:"YOUR_DOWNLOAD_LINK"
           }
         ];
       }
