@@ -2460,17 +2460,42 @@ window.addEventListener(
     }
 
 );
-function previewResource(previewUrl, title){
+function previewResource(previewUrl, title) {
 
     document.getElementById("pdf-title").textContent = title;
 
     document.getElementById("pdf-preview-body").innerHTML = `
 
+        <div style="
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:16px;
+        ">
+
+            <button
+                class="btn btn-outline"
+                onclick="closePdfPreview()">
+
+                <i class="fa-solid fa-arrow-left"></i>
+                Back
+
+            </button>
+
+            <h3 style="margin:0;">${title}</h3>
+
+            <div></div>
+
+        </div>
+
         <iframe
             src="${previewUrl}"
             width="100%"
-            height="600"
-            style="border:none;border-radius:12px;">
+            height="650"
+            style="
+                border:none;
+                border-radius:12px;
+            ">
         </iframe>
 
     `;
@@ -2724,6 +2749,34 @@ function loadSubjectResources(subject){
     });
 
 }
+// Click outside modal to close
+document
+.getElementById("pdf-preview-modal")
+.addEventListener("click", function(event){
+
+    if(event.target === this){
+
+        closePdfPreview();
+
+    }
+
+});
+// Escape key
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "Escape"){
+
+        const modal = document.getElementById("pdf-preview-modal");
+
+        if(modal && modal.classList.contains("open")){
+
+            closePdfPreview();
+
+        }
+
+    }
+
+});
 /*==========================================================
                 CONTACT FORM (FORMSPREE)
 ==========================================================*/
