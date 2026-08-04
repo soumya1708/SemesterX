@@ -36,6 +36,9 @@ let appState = {
 
 };
 
+// Stores the navigation history
+let navigationHistory = [];
+
 let postAuthRedirectActionCallback = null;
 
 
@@ -392,8 +395,12 @@ function logout() {
                     NAVIGATION
 ==========================================================*/
 
-function navigateTo(viewId) {
-
+function navigateTo(viewId, saveHistory = true) {
+    // Save current active page
+    const currentView = document.querySelector(".view.active");
+    if (currentView && saveHistory) {
+      navigationHistory.push(currentView.id);
+    }
     document.querySelectorAll(".view").forEach(view => {
 
         view.classList.remove("active");
@@ -414,6 +421,13 @@ function navigateTo(viewId) {
 
         targetView.classList.add("active");
 
+    }
+    if (saveHistory) {
+      history.pushState(
+        { view: viewId },
+        "",
+        "#"+viewId
+      );
     }
 
     if (viewId === "dashboard-view") {
@@ -502,6 +516,23 @@ function initializeSubjectResourceSearch(){
             });
 
     });
+
+}
+/*==========================================================
+                    GO BACK
+==========================================================*/
+
+function goBack() {
+
+    if (navigationHistory.length === 0) {
+
+        return;
+
+    }
+
+    const previousView = navigationHistory.pop();
+
+    navigateTo(previousView, false);
 
 }
 
@@ -3001,6 +3032,11 @@ async function sendContactMessage(event) {
     button.disabled = false;
     button.innerHTML = "Send Message";
 }
+window.addEventListener("popstate", () => {
+
+    goBack();
+
+});
 
 /*==========================================================
                     END OF FILE
