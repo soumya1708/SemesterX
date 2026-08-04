@@ -3031,7 +3031,7 @@ function loadSubjectResources(subject){
         ];
       }
       // ---------- Mathematics IA (BS-M101) ----------
-      else if(subject.includes("Mathematics 1A")){
+      else if(subject.includes("Mathematics IA")){
         demoResources = [
           {
             name:"2019-20 PYQ.pdf",
@@ -3071,7 +3071,7 @@ function loadSubjectResources(subject){
         ];
       }
       // ---------- Mathematics IIA (BS-M201) ----------
-      else if(subject.includes("Mathematics 2A")){
+      else if(subject.includes("Mathematics IIA")){
         demoResources = [
           {
             name:"2022-23 PYQ.pdf",
