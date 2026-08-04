@@ -2866,6 +2866,15 @@ function loadSubjectResources(subject){
           }
         ];
       }
+      else{
+        demoResources = [
+          {
+            name:"Coming Soon",
+            type:"PDF",
+            size:"--"
+          }
+        ];
+      }
     }
     // ---------------- PYQS ----------------
     else if(appState.activeResourceCategory === "pyqs"){
