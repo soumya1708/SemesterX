@@ -2727,6 +2727,81 @@ function loadSubjectResources(subject){
           }
         ];
       }
+      // ---------- Chemistry I (BS-CH201) ----------
+      else if(subject.includes("Chemistry")){
+        demoResources = [
+          {
+            name:"Atomic and Molecular Structure Notes.pdf",
+            type:"PDF",
+            size:"2.1 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Spectroscopic Techniques and Application Notes.pdf",
+            type:"PDF",
+            size:"2.3 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Intermolecular Forces Notes.pdf",
+            type:"PDF",
+            size:"2.0 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Free Energy and Chemical Equilibria Notes.pdf",
+            type:"PDF",
+            size:"2.2 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Periodic Properties Notes.pdf",
+            type:"PDF",
+            size:"2.0 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Stereochemistry Notes.pdf",
+            type:"PDF",
+            size:"2.1 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Organic Reactions and Synthesis of Drug Molecule Notes.pdf",
+            type:"PDF",
+            size:"2.4 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Important Questions.pdf",
+            type:"PDF",
+            size:"1.0 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Formula Sheet.pdf",
+            type:"PDF",
+            size:"500 KB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Reaction Sheet.pdf",
+            type:"PDF",
+            size:"500 KB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          }
+        ];
+      }
       // ---------- Programming for Problem Solving (BS-CS201 / ES-CS201) ---------
       else if(subject.includes("Programming for Problem Solving")){
         demoResources = [
