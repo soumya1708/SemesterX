@@ -2771,6 +2771,53 @@ function loadSubjectResources(subject){
           }
         ];
       }
+      // ---------- Physics I (BS-PH101) ----------
+      else if(subject.includes("Physics")){
+        demoResources = [
+          {
+            name:"2018-19 PYQ.pdf",
+            type:"PDF",
+            size:"1.25MB",
+            preview:"https://drive.google.com/file/d/1mtXQrM-mz8V9o2QDZpNNVUeY8maexCpN/preview",
+            download:"https://drive.google.com/uc?export=download&id=1mtXQrM-mz8V9o2QDZpNNVUeY8maexCpN"
+          },
+          {
+            name:"2019-20 PYQ.pdf",
+            type:"PDF",
+            size:"531KB",
+            preview:"https://drive.google.com/file/d/1ipW2ESHBDq-XFzJcK9tCgsrsBXRWLYHH/preview",
+            download:"https://drive.google.com/uc?export=download&id=1ipW2ESHBDq-XFzJcK9tCgsrsBXRWLYHH"
+          },
+          {
+            name:"2022-23 PYQ.pdf",
+            type:"PDF",
+            size:"1.43MB",
+            preview:"https://drive.google.com/file/d/1W8VavQtMqCw6EOECYjziSIKb3jhCuye9/preview",
+            download:"https://drive.google.com/uc?export=download&id=1W8VavQtMqCw6EOECYjziSIKb3jhCuye9"
+          },
+          {
+            name:"2023-24 PYQ.pdf",
+            type:"PDF",
+            size:"1.27MB",
+            preview:"https://drive.google.com/file/d/1ZvQ6yOZqVkPlJvqu5SQ0me3HnKEyUz2B/preview",
+            download:"https://drive.google.com/uc?export=download&id=1ZvQ6yOZqVkPlJvqu5SQ0me3HnKEyUz2B"
+          },
+          {
+            name:"2024-25 PYQ.pdf",
+            type:"PDF",
+            size:"1.29MB",
+            preview:"https://drive.google.com/file/d/1k9Womi55_J4lmHZrYaPivlYl7yszMCWK/preview",
+            download:"https://drive.google.com/uc?export=download&id=1k9Womi55_J4lmHZrYaPivlYl7yszMCWK"
+          },
+          {
+            name:"2025-26 PYQ.pdf",
+            type:"PDF",
+            size:"85.8KB",
+            preview:"https://drive.google.com/file/d/1d-FiSE_t5p5oYbUn7h0UOvaeLbFShK_7/preview",
+            download:"https://drive.google.com/uc?export=download&id=1d-FiSE_t5p5oYbUn7h0UOvaeLbFShK_7"
+          }
+        ];
+      }
       else{
         demoResources = [
           {
