@@ -2977,31 +2977,27 @@ function loadSubjectResources(subject){
     // ---------------- ORGANIZERS ----------------
 
     else{
-
         demoResources = [
+          {
+            name:"Formula Sheet.pdf",
+            type:"PDF",
+            size:"450 KB"
+          },
 
-            {
-                name:"Formula Sheet.pdf",
-                type:"PDF",
-                size:"450 KB"
-            },
-
-            {
-                name:"Mind Map.pdf",
-                type:"PDF",
-                size:"620 KB"
-            },
-
-            {
-                name:"Revision Sheet.pdf",
-                type:"PDF",
-                size:"800 KB"
-            }
+          {
+            name:"Mind Map.pdf",
+            type:"PDF",
+            size:"620 KB"
+          },
+          {
+            name:"Revision Sheet.pdf",
+            type:"PDF",
+            size:"800 KB"
+          }
         ];
-      }
     }
-
-    demoResources.forEach(resource=>{
+}
+demoResources.forEach(resource=>{
 
         const card = document.createElement("div");
 
