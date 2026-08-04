@@ -2727,6 +2727,95 @@ function loadSubjectResources(subject){
           }
         ];
       }
+      // ---------- Programming for Problem Solving (BS-CS201 / ES-CS201) ---------
+      else if(subject.includes("Programming for Problem Solving")){
+        demoResources = [
+          {
+            name:"Introduction to Programming Notes.pdf",
+            type:"PDF",
+            size:"2.0 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Arithmetic Expression and Precedence Notes.pdf",
+            type:"PDF",
+            size:"2.1 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Conditional Branching and Loops Notes.pdf",
+            type:"PDF",
+            size:"2.3 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Arrays (1D, 2D) Notes.pdf",
+            type:"PDF",
+            size:"2.2 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Basic Algorithm (Searching, Sorting) Notes.pdf",
+            type:"PDF",
+            size:"2.4 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Function Notes.pdf",
+            type:"PDF",
+            size:"1.9 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Recursion Notes.pdf",
+            type:"PDF",
+            size:"1.8 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Structure Notes.pdf",
+            type:"PDF",
+            size:"2.0 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Pointers Notes.pdf",
+            type:"PDF",
+            size:"2.2 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"File Handling Notes.pdf",
+            type:"PDF",
+            size:"2.1 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Important Questions.pdf",
+            type:"PDF",
+            size:"2.1 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          },
+          {
+            name:"Coding Questions.pdf",
+            type:"PDF",
+            size:"2.1 MB",
+            preview:"YOUR_PREVIEW_LINK",
+            download:"YOUR_DOWNLOAD_LINK"
+          }
+        ];
+      }
       // ---------- English (HM-HU201) ---------
       else if(subject.includes("English")){
         demoResources = [
@@ -2771,7 +2860,7 @@ function loadSubjectResources(subject){
             size:"1.9 MB",
             preview:"YOUR_PREVIEW_LINK",
             download:"YOUR_DOWNLOAD_LINK"
-          }
+          },
         ];
       }
     }
