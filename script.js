@@ -2733,7 +2733,7 @@ function loadSubjectResources(subject){
       if(subject.includes("Electrical")){
         demoResources = [
           {
-            name:"2019 PYQ.pdf",
+            name:"2018-19 PYQ.pdf",
             type:"PDF",
             size:"195 KB",
             preview:"https://drive.google.com/file/d/1yqkUU43w77lYlw527kgQwhOjJw0DnRDO/preview",
@@ -2741,7 +2741,7 @@ function loadSubjectResources(subject){
           },
 
           {
-            name:"2020 PYQ.pdf",
+            name:"2019-20 PYQ.pdf",
             type:"PDF",
             size:"148 KB",
             preview:"https://drive.google.com/file/d/1H2V9qZjxpUaIvmpdJvrFwY1EFZJA4fwg/preview",
@@ -2749,21 +2749,21 @@ function loadSubjectResources(subject){
           },
 
           {
-            name:"2023 PYQ.pdf",
+            name:"2022-23 PYQ.pdf",
             type:"PDF",
             size:"70 KB",
             preview:"https://drive.google.com/file/d/1GzCt-fKF6bLNj0tvHUs6BTONYOfvSxTe/preview",
             download:"https://drive.google.com/uc?export=download&id=1GzCt-fKF6bLNj0tvHUs6BTONYOfvSxTe"
           },
           {
-            name:"2024 PYQ.pdf",
+            name:"2023-24 PYQ.pdf",
             type:"PDF",
             size:"72 KB",
             preview:"https://drive.google.com/file/d/1DwMckKmWilkyy1Ngs175KymU41RQ9hMw/preview",
             download:"https://drive.google.com/uc?export=download&id=1DwMckKmWilkyy1Ngs175KymU41RQ9hMw"
           },
           {
-            name:"2025 PYQ.pdf",
+            name:"2025-26 PYQ.pdf",
             type:"PDF",
             size:"90 KB",
             preview:"https://drive.google.com/file/d/1bQRj55eAzui0btnsRCb1yjHYcivbt5qI/preview",
