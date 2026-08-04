@@ -3030,6 +3030,79 @@ function loadSubjectResources(subject){
           }
         ];
       }
+      // ---------- Mathematics IA (BS-M101) ----------
+      else if(subject.includes("Mathematics 1A")){
+        demoResources = [
+          {
+            name:"2019-20 PYQ.pdf",
+            type:"PDF",
+            size:"70.1KB",
+            preview:"https://drive.google.com/file/d/1HyCjB6hqebiPX4DhpZqaTdBMFl6DVdP4/preview",
+            download:"https://drive.google.com/uc?export=download&id=1HyCjB6hqebiPX4DhpZqaTdBMFl6DVdP4"
+          },
+          {
+            name:"2022-23 PYQ.pdf",
+            type:"PDF",
+            size:"58KB",
+            preview:"https://drive.google.com/file/d/1gOHbYm_zbJu-zt0cYh1k1M-xdq4R3FZ2/preview",
+            download:"https://drive.google.com/uc?export=download&id=1gOHbYm_zbJu-zt0cYh1k1M-xdq4R3FZ2"
+          },
+          {
+            name:"2023-24 PYQ.pdf",
+            type:"PDF",
+            size:"118KB",
+            preview:"https://drive.google.com/file/d/1WRi5EU_lrdVRqOzqIhTeRKUVD5R5nC7d/preview",
+            download:"https://drive.google.com/uc?export=download&id=1WRi5EU_lrdVRqOzqIhTeRKUVD5R5nC7d"
+          },
+          {
+            name:"2024-25 PYQ.pdf",
+            type:"PDF",
+            size:"83.6KB",
+            preview:"https://drive.google.com/file/d/1ozv_6CwFO89MMjF7EvN6c4lPs0kJ7BNd/preview",
+            download:"https://drive.google.com/uc?export=download&id=1ozv_6CwFO89MMjF7EvN6c4lPs0kJ7BNd"
+          },
+          {
+            name:"2025-26 PYQ.pdf",
+            type:"PDF",
+            size:"72.8KB",
+            preview:"https://drive.google.com/file/d/17EqvsnmWnDxCcgTEj5-eLa895EMa7vCd/preview",
+            download:"https://drive.google.com/uc?export=download&id=17EqvsnmWnDxCcgTEj5-eLa895EMa7vCd"
+          }
+        ];
+      }
+      // ---------- Mathematics IIA (BS-M201) ----------
+      else if(subject.includes("Mathematics 2A")){
+        demoResources = [
+          {
+            name:"2022-23 PYQ.pdf",
+            type:"PDF",
+            size:"90.8KB",
+            preview:"https://drive.google.com/file/d/1qpQhcXLZoM04JAolkMeioq4bQ_JzGx7U/preview",
+            download:"https://drive.google.com/file/d/1qpQhcXLZoM04JAolkMeioq4bQ_JzGx7U/preview"
+          },
+          {
+            name:"2023-24 PYQ.pdf",
+            type:"PDF",
+            size:"126KB",
+            preview:"https://drive.google.com/file/d/1c_63DAjEQG3GGv0khoj47Rub4zJhgbhJ/preview",
+            download:"https://drive.google.com/uc?export=download&id=1c_63DAjEQG3GGv0khoj47Rub4zJhgbhJ"
+          },
+          {
+            name:"2024-25 PYQ.pdf",
+            type:"PDF",
+            size:"91.9KB",
+            preview:"https://drive.google.com/file/d/10OhC2YD4ShVJ5WMYv4xmOP7SHugMe_--/preview",
+            download:"https://drive.google.com/uc?export=download&id=10OhC2YD4ShVJ5WMYv4xmOP7SHugMe_--"
+          },
+          {
+            name:"2025-26 PYQ.pdf",
+            type:"PDF",
+            size:"101KB",
+            preview:"https://drive.google.com/file/d/1v0xwbWk8Joepn3B6Sbxd5GI4XN5i6325/preview",
+            download:"https://drive.google.com/uc?export=download&id=1v0xwbWk8Joepn3B6Sbxd5GI4XN5i6325"
+          }
+        ];
+      }
       else{
         demoResources = [
           {
