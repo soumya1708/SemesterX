@@ -57,7 +57,7 @@
                     <h1>Start Your <br><span class="gradient-text">Semester Preparation</span></h1>
                     <p>Access high-quality engineered notes, previous year question banks, organized syllabus blueprints, and 1-on-1 personal mentorship custom curated for your university tracks.</p>
                     <div class="hero-actions">
-                        <button class="btn btn-primary btn-lg" onclick="goBack()">Start Preparation <i class="fa-solid fa-arrow-right"></i></button>
+                        <button class="btn btn-primary btn-lg" onclick="navigateTo('dept-view')">Start Preparation <i class="fa-solid fa-arrow-right"></i></button>
                         <a href="#features-section" class="btn btn-secondary btn-lg">Learn More</a>
                     </div>
                 </div>
@@ -237,7 +237,7 @@
 
         <section id="sem-view" class="view">
             <div class="selection-container">
-                <button class="back-btn" onclick="goBack()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                <button class="back-btn" onclick="navigateTo('dept-view')"><i class="fa-solid fa-arrow-left"></i> Back</button>
                 <h2 class="view-title">Choose Your Semester</h2>
                 <p class="view-subtitle">Select your continuous active curriculum term</p>
                 <div class="selection-grid dynamic-sem-grid">
@@ -258,7 +258,7 @@
         <section id="dashboard-view" class="view">
             <div class="dashboard-header">
                 <div class="dash-welcome">
-                    <button class="back-btn" onclick="goBack()"><i class="fa-solid fa-arrow-left"></i> Back</button>
+                    <button class="back-btn" onclick="navigateTo('dept-view')"><i class="fa-solid fa-arrow-left"></i> Back</button>
                     <h2 id="dashboard-welcome">
                         Welcome Back!
                     </h2>
@@ -347,7 +347,7 @@
             <div class="selection-container">
                 <button
                     class="back-btn"
-                    onclick="navigateTo('resource-view')">
+                    onclick="goBack()">
                     <i class="fa-solid fa-arrow-left"></i>
                     Back to Subjects
                 </button>
