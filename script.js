@@ -2866,9 +2866,7 @@ function loadSubjectResources(subject){
           }
         ];
       }
-      
     }
-
     // ---------------- PYQS ----------------
     else if(appState.activeResourceCategory === "pyqs"){
       // ---------- Basic Electrical Engineering ----------
