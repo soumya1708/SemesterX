@@ -2628,7 +2628,6 @@ function loadSubjectResources(subject){
     // ---------------- NOTES ----------------
 
     if(appState.activeResourceCategory === "notes"){
-       // ---------- Physics 1(BS-PH101)----------
       if(subject.includes("Physics")){
         demoResources = [
           { name:"Mechanics Notes.pdf", type:"PDF", size:"2.3 MB" },
@@ -2643,9 +2642,7 @@ function loadSubjectResources(subject){
       }
       // ---------- Mathematics-1A (BS-M101)----------
       else if(subject.includes("Mathematics IA")){
-
         demoResources = [
-
             { name:"Calculus (Integration) Notes.pdf", type:"PDF", size:"2.3 MB" },
             { name:"Calculus (Differentiation) Notes.pdf", type:"PDF", size:"2.2 MB" },
             { name:"Matrices Notes.pdf", type:"PDF", size:"2.0 MB" },
@@ -3000,9 +2997,8 @@ function loadSubjectResources(subject){
                 type:"PDF",
                 size:"800 KB"
             }
-
         ];
-
+      }
     }
 
     demoResources.forEach(resource=>{
