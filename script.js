@@ -2996,8 +2996,7 @@ function loadSubjectResources(subject){
           }
         ];
     }
-}
-demoResources.forEach(resource=>{
+    demoResources.forEach(resource=>{
 
         const card = document.createElement("div");
 
