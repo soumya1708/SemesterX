@@ -1452,7 +1452,7 @@ function renderSubjectResourceCards() {
             subjects = [
               "Chemistry I (BS-CH201)",
               "English (HM-HU201)",
-              "Programming for Problem Solving (BS-CS201)",
+              "Programming for Problem Solving (ES-CS201)",
               "Mathematics IIA (BS-M201)"
             ];
           }
@@ -2802,7 +2802,7 @@ function loadSubjectResources(subject){
           }
         ];
       }
-      // ---------- Programming for Problem Solving (BS-CS201 / ES-CS201) ---------
+      // ---------- Programming for Problem Solving (ES-CS201 / ES-CS201) ---------
       else if(subject.includes("Programming for Problem Solving")){
         demoResources = [
           {
@@ -3031,7 +3031,7 @@ function loadSubjectResources(subject){
         ];
       }
       // ---------- Chemistry I (BS-CH201) ----------
-      else if(subject.includes("Chemistry -I")){
+      else if(subject.includes("Chemistry I")){
         demoResources = [
           {
             name:"2018-19 PYQ.pdf",
