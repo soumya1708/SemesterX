@@ -3030,6 +3030,39 @@ function loadSubjectResources(subject){
           }
         ];
       }
+      // ---------- Programming for Problem Solving (ES-CS201) ----------
+      else if(subject.includes("Programming for Problem Solving")){
+        demoResources = [
+          {
+            name:"2022-23 PYQ.pdf",
+            type:"PDF",
+            size:"53.5KB",
+            preview:"https://drive.google.com/file/d/13oXr4dFwvS_40bjuR0SAJ8S5-5NUF6Ar/preview",
+            download:"https://drive.google.com/uc?export=download&id=13oXr4dFwvS_40bjuR0SAJ8S5-5NUF6Ar"
+          },
+          {
+            name:"2023-24 PYQ.pdf",
+            type:"PDF",
+            size:"70.4KB",
+            preview:"https://drive.google.com/file/d/1Ts6gZTsEnBvRLBNWGG4on0f94T2P0J6M/preview",
+            download:"https://drive.google.com/uc?export=download&id=1Ts6gZTsEnBvRLBNWGG4on0f94T2P0J6M"
+          },
+          {
+            name:"2024-25 PYQ.pdf",
+            type:"PDF",
+            size:"58.6KB",
+            preview:"https://drive.google.com/file/d/14XpbZewspgGxmomZzn1ER-IPo4nKysP3/preview",
+            download:"https://drive.google.com/uc?export=download&id=14XpbZewspgGxmomZzn1ER-IPo4nKysP3"
+          },
+          {
+            name:"2025-26 PYQ.pdf",
+            type:"PDF",
+            size:"372KB",
+            preview:"https://drive.google.com/file/d/1AP7rki9I3IP7W5-iPXsbifURTwj0sJl4/preview",
+            download:"https://drive.google.com/uc?export=download&id=1AP7rki9I3IP7W5-iPXsbifURTwj0sJl4"
+          }
+        ];
+      }
       // ---------- Chemistry I (BS-CH201) ----------
       else if(subject.includes("Chemistry I")){
         demoResources = [
