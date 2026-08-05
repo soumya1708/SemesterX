@@ -3110,6 +3110,46 @@ function loadSubjectResources(subject){
           }
         ];
       }
+      // ---------- English (HM-HU201) ----------
+      else if(subject.includes("English")){
+        demoResources = [
+          {
+            name:"2018-19 PYQ.pdf",
+            type:"PDF",
+            size:"354KB",
+            preview:"https://drive.google.com/file/d/1AvmY1GZJtJzgKENUMGPaRvY2zBLSuyym/preview",
+            download:"https://drive.google.com/uc?export=download&id=1AvmY1GZJtJzgKENUMGPaRvY2zBLSuyym"
+          },
+          {
+            name:"2022-23 PYQ.pdf",
+            type:"PDF",
+            size:"100KB",
+            preview:"https://drive.google.com/file/d/1ceX7PhC9pcK2XXhHgAxOnn8oAhLGUUWj/preview",
+            download:"https://drive.google.com/uc?export=download&id=1ceX7PhC9pcK2XXhHgAxOnn8oAhLGUUWj"
+          },
+          {
+            name:"2023-24 PYQ.pdf",
+            type:"PDF",
+            size:"121KB",
+            preview:"https://drive.google.com/file/d/1mxg6IbS_N_M38g-e3LERUhaNk0uCXlar/preview",
+            download:"https://drive.google.com/uc?export=download&id=1mxg6IbS_N_M38g-e3LERUhaNk0uCXlar"
+          },
+          {
+            name:"2024-25 PYQ.pdf",
+            type:"PDF",
+            size:"79KB",
+            preview:"https://drive.google.com/file/d/1iXsl0TrNCzZoOELcv1o6TwJS5LHg4WRO/preview",
+            download:"https://drive.google.com/uc?export=download&id=1iXsl0TrNCzZoOELcv1o6TwJS5LHg4WRO"
+          },
+          {
+            name:"2025-26 PYQ.pdf",
+            type:"PDF",
+            size:"227KB",
+            preview:"https://drive.google.com/file/d/1wIu1Hv9xue90IoFe3ISL2YXTOZnd1RI9/preview",
+            download:"https://drive.google.com/uc?export=download&id=1wIu1Hv9xue90IoFe3ISL2YXTOZnd1RI9"
+          }
+        ];
+      }
       // ---------- Mathematics IA (BS-M101) ----------
       else if(subject.includes("Mathematics IA")){
         demoResources = [
