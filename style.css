@@ -722,8 +722,18 @@ body {
 
 }
 
-.resources-display-grid {
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px;
+.resources-display-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(240px,1fr));
+
+    gap:16px;
+
+    align-items:start;
+
+    overflow:visible;
+
 }
 .subject-resource-card {
     background: var(--bg-surface); border: 1px solid var(--border-color);
