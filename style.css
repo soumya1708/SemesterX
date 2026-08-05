@@ -193,6 +193,99 @@ body {
     cursor: pointer;
     color: var(--text-primary);
 }
+/* ===========================
+        ELITE NAV BUTTON
+=========================== */
+
+.elite-nav-btn{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    padding:10px 18px;
+
+    border:none;
+    border-radius:999px;
+
+    cursor:pointer;
+
+    color:#fff;
+    font-size:14px;
+    font-weight:700;
+
+    background:linear-gradient(
+        135deg,
+        #f59e0b 0%,
+        #ec4899 50%,
+        #7c3aed 100%
+    );
+
+    background-size:200% 200%;
+
+    transition:all .35s ease;
+
+    box-shadow:
+        0 8px 22px rgba(236,72,153,.28);
+
+    animation:eliteGlow 3s ease-in-out infinite;
+}
+.elite-nav-btn i{
+
+    color:#ffe082;
+
+    font-size:13px;
+
+}
+.elite-nav-btn:hover{
+
+    transform:translateY(-2px);
+
+    background-position:right center;
+
+    box-shadow:
+        0 12px 28px rgba(124,58,237,.45);
+
+}
+.elite-nav-btn:active{
+
+    transform:scale(.96);
+
+}
+@keyframes eliteGlow{
+
+    0%{
+
+        box-shadow:
+            0 6px 16px rgba(245,158,11,.30);
+
+    }
+
+    50%{
+
+        box-shadow:
+            0 10px 26px rgba(168,85,247,.45);
+
+    }
+
+    100%{
+
+        box-shadow:
+            0 6px 16px rgba(245,158,11,.30);
+
+    }
+
+}
+.elite-nav-btn{
+
+    width:100%;
+
+    justify-content:center;
+
+    margin:8px 0;
+
+}
 
 /* --- BUTTON ARCHITECTURE UI --- */
 .btn {
