@@ -3030,6 +3030,53 @@ function loadSubjectResources(subject){
           }
         ];
       }
+      // ---------- Chemistry I (BS-CH201) ----------
+      else if(subject.includes("Chemistry -I")){
+        demoResources = [
+          {
+            name:"2018-19 PYQ.pdf",
+            type:"PDF",
+            size:"125KB",
+            preview:"https://drive.google.com/file/d/1LLWuaTaUG1vXe36Ag8tZkZycnR20itxZ/preview",
+            download:"https://drive.google.com/uc?export=download&id=1LLWuaTaUG1vXe36Ag8tZkZycnR20itxZ"
+          },
+          {
+            name:"2019-20 PYQ.pdf",
+            type:"PDF",
+            size:"300KB",
+            preview:"https://drive.google.com/file/d/11J_ou1GaDQ2Rtc-cJOVIt1C8ZXbJXoWG/preview",
+            download:"https://drive.google.com/uc?export=download&id=11J_ou1GaDQ2Rtc-cJOVIt1C8ZXbJXoWG"
+          },
+          {
+            name:"2022-23 PYQ.pdf",
+            type:"PDF",
+            size:"80KB",
+            preview:"https://drive.google.com/file/d/14kcphXqtcfqD6Y4fnzkNx9WtDLeTh6I7/preview",
+            download:"https://drive.google.com/uc?export=download&id=14kcphXqtcfqD6Y4fnzkNx9WtDLeTh6I7"
+          },
+          {
+            name:"2023-24 PYQ.pdf",
+            type:"PDF",
+            size:"96KB",
+            preview:"https://drive.google.com/file/d/1-e0f4WSls_0NgmejXJN3V8fTXr8wusrA/preview",
+            download:"https://drive.google.com/uc?export=download&id=1-e0f4WSls_0NgmejXJN3V8fTXr8wusrA"
+          },
+          {
+            name:"2024-25 PYQ.pdf",
+            type:"PDF",
+            size:"75KB",
+            preview:"https://drive.google.com/file/d/19zY51E9JnvBzqLYD8R8h-1cnFBQz8Tok/preview",
+            download:"https://drive.google.com/uc?export=download&id=19zY51E9JnvBzqLYD8R8h-1cnFBQz8Tok"
+          },
+          {
+            name:"2025-26 PYQ.pdf",
+            type:"PDF",
+            size:"863KB",
+            preview:"https://drive.google.com/file/d/15Cws954Kd79D7xisowxKH4WhElpQZtkf/preview",
+            download:"https://drive.google.com/uc?export=download&id=15Cws954Kd79D7xisowxKH4WhElpQZtkf"
+          }
+        ];
+      }
       // ---------- Mathematics IA (BS-M101) ----------
       else if(subject.includes("Mathematics IA")){
         demoResources = [
