@@ -3315,8 +3315,8 @@ function loadSubjectResources(subject){
         container.appendChild(card);
 
     });
-    // Show Premium Banner only in PYQ section
-    if(appState.activeResourceCategory === "pyqs"){
+  // Show Premium Banner only in PYQ section
+  if(appState.activeResourceCategory === "pyqs"){
       container.innerHTML += `
         <div class="premium-pyq-banner">
             <div class="premium-pyq-left">
@@ -3378,7 +3378,7 @@ function loadSubjectResources(subject){
         </div>
 
     `;
-    }
+  }
 }
 // Click outside modal to close
 document
