@@ -422,14 +422,13 @@ function navigateTo(viewId, saveHistory = true) {
         targetView.classList.add("active");
 
     }
-    if (saveHistory) {
+    if (!history.state || history.state.view !== viewId) {
       history.pushState(
         { view: viewId },
         "",
-        "#"+viewId
+        "#" + viewId
       );
     }
-
     if (viewId === "dashboard-view") {
 
     document.getElementById("dash-dept-lbl").textContent =
@@ -524,15 +523,7 @@ function initializeSubjectResourceSearch(){
 
 function goBack() {
 
-    if (navigationHistory.length === 0) {
-
-        return;
-
-    }
-
-    const previousView = navigationHistory.pop();
-
-    navigateTo(previousView, false);
+    history.back();
 
 }
 
@@ -2589,7 +2580,7 @@ function closePdfPreview(){
 
 function downloadResource(downloadUrl){
 
-    showLoader("Preparing Download...");
+    showLoader();
 
     setTimeout(()=>{
 
@@ -3400,12 +3391,15 @@ async function sendContactMessage(event) {
     button.disabled = false;
     button.innerHTML = "Send Message";
 }
-window.addEventListener("popstate", () => {
+window.addEventListener("popstate", (event) => {
 
-    goBack();
+    if (event.state && event.state.view) {
+
+        navigateTo(event.state.view, false);
+
+    }
 
 });
-
 /*==========================================================
                     END OF FILE
 ==========================================================*/
