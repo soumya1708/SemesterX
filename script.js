@@ -3315,15 +3315,11 @@ function loadSubjectResources(subject){
         container.appendChild(card);
 
     });
-  // Show Premium Banner only in PYQ section
-  if(appState.activeResourceCategory === "pyqs"){
-
-    container.innerHTML += `
-
+    // Show Premium Banner only in PYQ section
+    if(appState.activeResourceCategory === "pyqs"){
+      container.innerHTML += `
         <div class="premium-pyq-banner">
-
             <div class="premium-pyq-left">
-
                 <span class="premium-tag">
                     <i class="fa-solid fa-crown"></i>
                     ELITE ACCESS
@@ -3382,9 +3378,7 @@ function loadSubjectResources(subject){
         </div>
 
     `;
-
-}
-
+    }
 }
 // Click outside modal to close
 document
