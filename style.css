@@ -934,13 +934,10 @@ body {
 }
 
 .resource-title{
-
     margin-top:20px;
-
     font-size:16px;
-
     font-weight:700;
-
+    min-height:48px;
 }
 
 .resource-sub{
