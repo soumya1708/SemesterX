@@ -1184,3 +1184,163 @@ body {
     color:#9ca3af;
     font-size:18px;
 }
+/*=========================================
+        PREMIUM PYQ BANNER
+=========================================*/
+
+.premium-pyq-banner{
+
+    margin-top:50px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:40px;
+
+    padding:35px;
+
+    border-radius:22px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(124,58,237,.15),
+        rgba(236,72,153,.10),
+        rgba(245,158,11,.15)
+    );
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.25);
+
+}
+.premium-pyq-left{
+
+    flex:1;
+
+}
+
+.premium-pyq-left h2{
+
+    margin:15px 0;
+
+    font-size:30px;
+
+    font-weight:800;
+
+}
+
+.premium-pyq-left p{
+
+    opacity:.85;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+.premium-pyq-left ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.premium-pyq-left li{
+
+    margin:12px 0;
+
+    font-size:16px;
+
+}
+
+.premium-pyq-left li i{
+
+    color:#10b981;
+
+    margin-right:10px;
+
+}
+.premium-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    color:white;
+
+    background:linear-gradient(
+        90deg,
+        #f59e0b,
+        #ec4899,
+        #7c3aed
+    );
+
+}
+.premium-pyq-right{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+.premium-upgrade-btn{
+
+    padding:18px 38px;
+
+    border-radius:999px;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    background:linear-gradient(
+        90deg,
+        #f59e0b,
+        #ec4899,
+        #7c3aed
+    );
+
+    border:none;
+
+    transition:.35s;
+
+    box-shadow:0 12px 35px rgba(124,58,237,.35);
+
+}
+
+.premium-upgrade-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 45px rgba(124,58,237,.45);
+
+}
+@media(max-width:900px){
+
+    .premium-pyq-banner{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}
