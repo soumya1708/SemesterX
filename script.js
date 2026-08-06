@@ -2528,10 +2528,6 @@ function previewResource(previewUrl, title) {
 
     document.getElementById("pdf-title").textContent = title;
 
-    function previewResource(previewUrl, title) {
-
-    document.getElementById("pdf-title").textContent = title;
-
     document.getElementById("pdf-preview-body").innerHTML = `
         <iframe
             src="${previewUrl}"
