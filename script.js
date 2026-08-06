@@ -3315,58 +3315,83 @@ function loadSubjectResources(subject){
         container.appendChild(card);
 
     });
-    // ================= PREMIUM BANNER =================
-  let premiumBanner = "";
-  if (appState.activeResourceCategory === "pyqs") {
+  // ================= PREMIUM BANNER =================
+
+let premiumBanner = "";
+
+if (appState.activeResourceCategory === "pyqs") {
+
     premiumBanner = `
     <div class="premium-pyq-banner">
+
         <div class="premium-pyq-left">
+
             <span class="premium-tag">
                 <i class="fa-solid fa-crown"></i>
                 ELITE ACCESS
             </span>
+
             <h2>
                 Need More Previous Year Questions?
             </h2>
+
             <p>
                 Unlock 10+ Years of PYQs, detailed solutions,
                 chapter-wise collections, predicted questions,
                 and premium exam resources.
             </p>
+
             <ul>
+
                 <li>
                     <i class="fa-solid fa-circle-check"></i>
                     10+ Years Previous Year Questions
                 </li>
+
                 <li>
                     <i class="fa-solid fa-circle-check"></i>
                     Step-by-Step Solutions
                 </li>
+
                 <li>
                     <i class="fa-solid fa-circle-check"></i>
                     Chapter-wise PYQs
                 </li>
+
                 <li>
                     <i class="fa-solid fa-circle-check"></i>
                     Expected Questions
                 </li>
+
             </ul>
+
         </div>
+
         <div class="premium-pyq-right">
+
             <button
                 class="btn btn-primary premium-upgrade-btn"
                 onclick="navigateTo('mentorship-view')">
+
                 <i class="fa-solid fa-crown"></i>
+
                 Become Elite Member
+
             </button>
+
         </div>
+
     </div>
     `;
-  }
-  else if (appState.activeResourceCategory === "notes") {
+}
+
+else if (appState.activeResourceCategory === "notes") {
+
     premiumBanner = `
     <div class="premium-pyq-banner">
+
         <div class="premium-pyq-left">
+
             <span class="premium-tag">
                 <i class="fa-solid fa-crown"></i>
                 ELITE ACCESS
