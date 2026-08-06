@@ -2528,48 +2528,27 @@ function previewResource(previewUrl, title) {
 
     document.getElementById("pdf-title").textContent = title;
 
+    function previewResource(previewUrl, title) {
+
+    document.getElementById("pdf-title").textContent = title;
+
     document.getElementById("pdf-preview-body").innerHTML = `
-
-        <div style="
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            margin-bottom:16px;
-        ">
-
-            <button
-                class="btn btn-outline"
-                onclick="closePdfPreview()">
-
-                <i class="fa-solid fa-arrow-left"></i>
-                Back
-
-            </button>
-
-            <h3 style="margin:0;">${title}</h3>
-
-            <div></div>
-
-        </div>
-
         <iframe
             src="${previewUrl}"
             width="100%"
-            height="650"
+            height="100%"
             style="
+                width:100%;
+                height:100%;
                 border:none;
-                border-radius:12px;
             ">
         </iframe>
-
     `;
 
     document
         .getElementById("pdf-preview-modal")
         .classList.add("open");
-
 }
-
 function closePdfPreview(){
 
     document
