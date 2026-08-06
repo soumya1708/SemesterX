@@ -3315,71 +3315,143 @@ function loadSubjectResources(subject){
         container.appendChild(card);
 
     });
-  // Show Premium Banner only in PYQ section
-  if(appState.activeResourceCategory === "pyqs"){
-      container.innerHTML += `
-        <div class="premium-pyq-banner">
-            <div class="premium-pyq-left">
-                <span class="premium-tag">
-                    <i class="fa-solid fa-crown"></i>
-                    ELITE ACCESS
-                </span>
+  // ================= PREMIUM BANNER =================
 
-                <h2>
-                    Need More Previous Year Questions?
-                </h2>
+let premiumBanner = "";
 
-                <p>
-                    Unlock 10+ Years of PYQs, detailed solutions,
-                    chapter-wise collections, predicted questions,
-                    and premium exam resources.
-                </p>
+if (appState.activeResourceCategory === "pyqs") {
 
-                <ul>
+    premiumBanner = `
+    <div class="premium-pyq-banner">
 
-                    <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        10+ Years Previous Year Questions
-                    </li>
+        <div class="premium-pyq-left">
 
-                    <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        Step-by-Step Solutions
-                    </li>
+            <span class="premium-tag">
+                <i class="fa-solid fa-crown"></i>
+                ELITE ACCESS
+            </span>
 
-                    <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        Expected Questions
-                    </li>
+            <h2>
+                Need More Previous Year Questions?
+            </h2>
 
-                    <li>
-                        <i class="fa-solid fa-circle-check"></i>
-                        Chapter-wise PYQs
-                    </li>
+            <p>
+                Unlock 10+ Years of PYQs, detailed solutions,
+                chapter-wise collections, predicted questions,
+                and premium exam resources.
+            </p>
 
-                </ul>
+            <ul>
 
-            </div>
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    10+ Years Previous Year Questions
+                </li>
 
-            <div class="premium-pyq-right">
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Step-by-Step Solutions
+                </li>
 
-                <button
-                    class="btn btn-primary premium-upgrade-btn"
-                    onclick="navigateTo('mentorship-view')">
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Chapter-wise PYQs
+                </li>
 
-                    <i class="fa-solid fa-crown"></i>
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Expected Questions
+                </li>
 
-                    Become Elite Member
-
-                </button>
-
-            </div>
+            </ul>
 
         </div>
 
+        <div class="premium-pyq-right">
+
+            <button
+                class="btn btn-primary premium-upgrade-btn"
+                onclick="navigateTo('mentorship-view')">
+
+                <i class="fa-solid fa-crown"></i>
+
+                Become Elite Member
+
+            </button>
+
+        </div>
+
+    </div>
     `;
-  }
 }
+
+else if (appState.activeResourceCategory === "notes") {
+
+    premiumBanner = `
+    <div class="premium-pyq-banner">
+
+        <div class="premium-pyq-left">
+
+            <span class="premium-tag">
+                <i class="fa-solid fa-crown"></i>
+                ELITE ACCESS
+            </span>
+
+            <h2>
+                Need More Premium Notes?
+            </h2>
+
+            <p>
+                Unlock complete handwritten notes, chapter-wise
+                study material, quick revision sheets,
+                important questions, and premium exam resources.
+            </p>
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Complete Handwritten Notes
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Chapter-wise Study Material
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Quick Revision Sheets
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Important Questions & Short Notes
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="premium-pyq-right">
+
+            <button
+                class="btn btn-primary premium-upgrade-btn"
+                onclick="navigateTo('mentorship-view')">
+
+                <i class="fa-solid fa-crown"></i>
+
+                Become Elite Member
+
+            </button>
+
+        </div>
+
+    </div>
+    `;
+}
+
+container.innerHTML += premiumBanner;
 // Click outside modal to close
 document
 .getElementById("pdf-preview-modal")
