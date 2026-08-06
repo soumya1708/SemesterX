@@ -3446,12 +3446,11 @@ else if (appState.activeResourceCategory === "notes") {
             </button>
 
         </div>
-
     </div>
     `;
 }
-
-container.innerHTML += premiumBanner;
+  container.innerHTML += premiumBanner;
+}
 // Click outside modal to close
 document
 .getElementById("pdf-preview-modal")
