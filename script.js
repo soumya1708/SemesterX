@@ -3384,6 +3384,78 @@ if (appState.activeResourceCategory === "pyqs") {
     </div>
     `;
 }
+// ---------------- ORGANIZERS ----------------
+
+else if (appState.activeResourceCategory === "organizers") {
+
+    premiumBanner = `
+    <div class="premium-pyq-banner">
+
+        <div class="premium-pyq-left">
+
+            <span class="premium-tag">
+                <i class="fa-solid fa-crown"></i>
+                ELITE ACCESS
+            </span>
+
+            <h2>
+                Unlock Premium Study Organizers
+            </h2>
+
+            <p>
+                Organize your preparation smarter with exclusive revision
+                resources, visual learning tools, and premium study materials
+                designed for faster learning and last-minute revision.
+            </p>
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Special Notes
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Mind Maps
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Last-Minute Revision Sheets
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Cheat Sheets
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Revision Flashcards
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="premium-pyq-right">
+
+            <button
+                class="btn btn-primary premium-upgrade-btn"
+                onclick="navigateTo('mentorship-view')">
+
+                <i class="fa-solid fa-crown"></i>
+
+                Become Elite Member
+
+            </button>
+
+        </div>
+
+    </div>
+    `;
+}
 
 else if (appState.activeResourceCategory === "notes") {
 
