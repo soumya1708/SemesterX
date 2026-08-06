@@ -3362,8 +3362,8 @@ function loadSubjectResources(subject){
         </div>
     </div>
     `;
-}
-else if (appState.activeResourceCategory === "notes") {
+  }
+  else if (appState.activeResourceCategory === "notes") {
     premiumBanner = `
     <div class="premium-pyq-banner">
         <div class="premium-pyq-left">
