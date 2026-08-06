@@ -888,6 +888,184 @@ body {
     .resource-view-header { flex-direction: column; align-items: flex-start; }
     .search-box-container { max-width: 100%; }
 }
+/* ==========================
+        FULL PDF VIEWER
+========================== */
+
+.pdf-viewer{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100vw;
+    height:100vh;
+
+    background:var(--bg-main);
+
+    display:none;
+
+    flex-direction:column;
+
+    z-index:99999;
+
+}
+
+.pdf-viewer.open{
+
+    display:flex;
+
+}
+
+/* ==========================
+        TOOLBAR
+========================== */
+
+.pdf-toolbar{
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 24px;
+
+    background:var(--card-bg);
+
+    border-bottom:1px solid var(--border-color);
+
+    flex-shrink:0;
+
+}
+
+.pdf-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+#pdf-title{
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.pdf-toolbar-btn{
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 16px;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:var(--text-primary);
+
+    transition:.25s;
+
+}
+
+.pdf-toolbar-btn:hover{
+
+    background:rgba(0,0,0,.06);
+
+}
+
+[data-theme="dark"] .pdf-toolbar-btn:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.pdf-toolbar-btn.primary{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.pdf-toolbar-btn.primary:hover{
+
+    background:var(--primary-hover);
+
+}
+
+/* ==========================
+        PDF BODY
+========================== */
+
+.pdf-body{
+
+    flex:1;
+
+    overflow:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:30px;
+
+    background:#f1f5f9;
+
+}
+
+/* Dark Mode */
+
+[data-theme="dark"] .pdf-body{
+
+    background:#0f172a;
+
+}
+
+/* iframe */
+
+.pdf-body iframe{
+
+    width:100%;
+
+    height:100%;
+
+    border:none;
+
+}
+
+/* embed */
+
+.pdf-body embed{
+
+    width:100%;
+
+    height:100%;
+
+    border:none;
+
+}
 /* ===========================================
    RESOURCE FILTER BAR
 =========================================== */
@@ -1129,41 +1307,6 @@ body {
 
 }
 
-.pdf-modal-card{
-
-    width:90%;
-    max-width:900px;
-
-    background:#111827;
-
-    border-radius:20px;
-
-    padding:30px;
-
-    position:relative;
-
-    color:white;
-
-}
-
-.pdf-close-btn{
-
-    position:absolute;
-
-    top:15px;
-    right:20px;
-
-    background:none;
-
-    border:none;
-
-    color:white;
-
-    font-size:32px;
-
-    cursor:pointer;
-
-}
 .department-search{
     max-width:700px;
     margin:35px auto;
