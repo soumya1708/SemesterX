@@ -530,69 +530,31 @@
     </div>
 
     <button id="back-to-top" class="back-to-top" aria-label="Back to Top"><i class="fa-solid fa-arrow-up"></i></button>
-    <div class="pdf-modal-overlay" id="pdf-preview-modal">
-
-    <div class="pdf-modal-card" style="max-width:900px;">
-        <button
-            class="pdf-close-btn"
-            onclick="closePdfPreview()">
-
-            &times;
-
-        </button>
-
-        <h2 id="pdf-title">
-
-            PDF Preview
-
-        </h2>
-
-        <div
-            id="pdf-preview-body"
-            style="
-                margin-top:20px;
-                height:550px;
-                display:flex;
-                justify-content:center;
-                align-items:center;
-                background:#f5f5f5;
-                border-radius:12px;
-            ">
-
-            <p>
-
-                PDF Preview will appear here.
-
-            </p>
-
-        </div>
-
-        <div
-            style="
-                display:flex;
-                justify-content:flex-end;
-                gap:15px;
-                margin-top:20px;
-            ">
-
+    <!-- =========================
+     FULL SCREEN PDF VIEWER
+    ========================== -->
+    <div id="pdf-preview-modal" class="pdf-viewer">
+        <!-- Top Toolbar -->
+        <div class="pdf-toolbar">
+            <div class="pdf-left">
+                <button class="pdf-toolbar-btn" onclick="closePdfPreview()">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back
+                </button>
+                <span id="pdf-title">
+                    PDF Preview
+                </span>
+            </div>
             <button
-                class="btn btn-outline"
-                onclick="closePdfPreview()">
-
-                Close
-
-            </button>
-
-            <button
-                class="btn btn-primary">
-
+                id="pdf-download-btn"
+                class="pdf-toolbar-btn primary">
+                <i class="fa-solid fa-download"></i>
                 Download
-
             </button>
         </div>
+        <!-- PDF -->
+        <div id="pdf-preview-body" class="pdf-body">
+            
     </div>
-    </div>
-    <script src="dev-config.js"></script>
-    <script src="script.js"></script>
-</body>
-</html>
+
+</div>
