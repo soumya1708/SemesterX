@@ -1380,3 +1380,220 @@ body {
     }
 
 }
+/*=========================================
+      ELITE SUBJECT PROMOTION BAR
+=========================================*/
+
+.elite-subject-banner{
+
+    margin:28px 0 36px;
+
+    width:100%;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    background:linear-gradient(
+        135deg,
+        rgba(245,158,11,.16),
+        rgba(236,72,153,.10),
+        rgba(124,58,237,.16)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 14px 35px rgba(0,0,0,.18);
+
+}
+
+.elite-banner-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+    padding:20px 28px;
+
+}
+
+.elite-banner-text{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex:1;
+
+}
+
+.elite-banner-text i{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #f59e0b,
+        #ec4899,
+        #7c3aed
+    );
+
+    color:#fff;
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+.elite-banner-text span{
+
+    font-size:17px;
+
+    line-height:1.7;
+
+    color:rgba(255,255,255,.92);
+
+}
+
+.elite-banner-text strong{
+
+    color:#fff;
+
+}
+
+.elite-banner-btn{
+
+    padding:15px 30px;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    color:#fff;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+    background:linear-gradient(
+        90deg,
+        #f59e0b,
+        #ec4899,
+        #7c3aed
+    );
+
+    transition:.35s;
+
+    box-shadow:0 10px 28px rgba(124,58,237,.35);
+
+}
+
+.elite-banner-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 38px rgba(124,58,237,.45);
+
+}
+@media (max-width:900px){
+
+    .elite-banner-content{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        padding:24px;
+
+        gap:22px;
+
+    }
+
+    .elite-banner-text{
+
+        flex-direction:column;
+
+        gap:16px;
+
+    }
+
+    .elite-banner-text span{
+
+        font-size:15px;
+
+    }
+
+    .elite-banner-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .elite-subject-banner{
+
+        margin:20px 0 28px;
+
+        border-radius:16px;
+
+    }
+
+    .elite-banner-content{
+
+        padding:20px 18px;
+
+    }
+
+    .elite-banner-text i{
+
+        width:46px;
+
+        height:46px;
+
+        font-size:18px;
+
+    }
+
+    .elite-banner-text span{
+
+        font-size:14px;
+
+        line-height:1.6;
+
+    }
+
+    .elite-banner-btn{
+
+        padding:14px;
+
+        font-size:14px;
+
+    }
+
+}
