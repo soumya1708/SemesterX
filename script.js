@@ -2561,7 +2561,13 @@ function downloadResource(downloadUrl){
 
         hideLoader();
 
-        window.open(downloadUrl,"_blank");
+        const link = document.createElement("a");
+        link.href = downloadUrl;
+        link.download = "";
+        link.target = "_self";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
 
         showToast(
             "Download Started!",
