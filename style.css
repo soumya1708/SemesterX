@@ -1771,3 +1771,271 @@ body {
     color:#ffffff;
 
 }
+/* =======================================================
+   UNIVERSAL RESPONSIVE SYSTEM
+=======================================================*/
+
+html{
+    overflow-x:hidden;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+*{
+    max-width:100%;
+    box-sizing:border-box;
+}
+
+img,
+iframe,
+video,
+canvas{
+    max-width:100%;
+    height:auto;
+}
+
+/* Containers */
+
+.view,
+.selection-container,
+.dashboard-container,
+.resources-container{
+    width:100%;
+}
+
+/* Universal Cards */
+
+.resource-card,
+.subject-card,
+.dashboard-card,
+.select-card{
+    width:100%;
+}
+
+/* ==========================
+        TABLETS
+========================== */
+
+@media (max-width:1024px){
+
+.resources-display-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+}
+
+.selection-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+}
+
+.dashboard-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+}
+
+}
+
+/* ==========================
+        MOBILE
+========================== */
+
+@media (max-width:768px){
+
+.view{
+    padding:24px 16px;
+}
+
+.view-title{
+    font-size:34px;
+}
+
+.view-subtitle{
+    font-size:18px;
+}
+
+.resources-display-grid,
+.selection-grid,
+.dashboard-grid,
+.dynamic-sem-grid,
+.features-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.resource-card{
+
+    width:100%;
+
+    min-width:0;
+
+}
+
+.resource-actions{
+
+    flex-direction:column;
+
+}
+
+.resource-actions button{
+
+    width:100%;
+
+}
+
+.resource-title{
+
+    min-height:auto;
+
+}
+
+.filter-input{
+
+    min-width:100%;
+
+}
+
+.resource-filter-bar{
+
+    flex-direction:column;
+
+}
+
+.department-search{
+
+    width:100%;
+
+}
+
+.google-login-btn{
+
+    min-width:0;
+
+    width:100%;
+
+}
+
+.pdf-toolbar{
+
+    height:auto;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    padding:15px;
+
+}
+
+.pdf-left{
+
+    width:100%;
+
+    justify-content:space-between;
+
+}
+
+.premium-pyq-banner,
+.elite-banner-content{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.premium-upgrade-btn,
+.elite-banner-btn{
+
+    width:100%;
+
+}
+
+.hero-content h1{
+
+    font-size:38px;
+
+}
+
+.hero-actions{
+
+    flex-direction:column;
+
+}
+
+.nav-container{
+
+    padding:0 16px;
+
+}
+
+}
+
+/* ==========================
+        SMALL PHONES
+========================== */
+
+@media (max-width:480px){
+
+.view{
+
+    padding:18px 12px;
+
+}
+
+.view-title{
+
+    font-size:28px;
+
+}
+
+.hero-content h1{
+
+    font-size:30px;
+
+}
+
+.hero-content p{
+
+    font-size:15px;
+
+}
+
+.resource-card{
+
+    padding:14px;
+
+}
+
+.resource-actions{
+
+    gap:10px;
+
+}
+
+.resource-actions button{
+
+    padding:12px;
+
+    font-size:14px;
+
+}
+
+.premium-pyq-left h2{
+
+    font-size:22px;
+
+}
+
+.premium-pyq-left p{
+
+    font-size:14px;
+
+}
+
+.elite-banner-text span{
+
+    font-size:14px;
+
+}
+
+}
