@@ -2609,7 +2609,7 @@ function loadSubjectResources(subject){
           { name:"Quantum Mechanics Notes.pdf", type:"PDF", size:"2.0 MB" },
           { name:"Statistical Mechanics Notes.pdf", type:"PDF", size:"1.8 MB" },
           { name:"Important Questions.pdf", type:"PDF", size:"950 KB" },
-          { name:"Formula Sheet.pdf", type:"PDF", size:"630 KB" , preview:"https://drive.google.com/file/d/1D3fihKQdh9GUklnr9f-cYLRbnDpINV-c/view?usp=drive_link", download:"https://drive.google.com/uc?export=download&id=1D3fihKQdh9GUklnr9f-cYLRbnDpINV-c"}
+          { name:"Formula Sheet.pdf", type:"PDF", size:"630 KB" , preview:"https://drive.google.com/file/d/1D3fihKQdh9GUklnr9f-cYLRbnDpINV-c/preview", download:"https://drive.google.com/uc?export=download&id=1D3fihKQdh9GUklnr9f-cYLRbnDpINV-c"}
         ];
       }
       // ---------- Mathematics-1A (BS-M101)----------
@@ -2762,7 +2762,7 @@ function loadSubjectResources(subject){
             name:"Formula Sheet.pdf",
             type:"PDF",
             size:"758 KB",
-            preview:"https://drive.google.com/file/d/1ME5axFEKkfaKtYFOq-uUqIoMZXtX4g19/view?usp=drive_link",
+            preview:"https://drive.google.com/file/d/1ME5axFEKkfaKtYFOq-uUqIoMZXtX4g19/preview",
             download:"https://drive.google.com/uc?export=download&id=1ME5axFEKkfaKtYFOq-uUqIoMZXtX4g19"
           },
           {
