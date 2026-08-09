@@ -2524,7 +2524,7 @@ window.addEventListener(
     }
 
 );
-function previewResource(previewUrl, title) {
+function previewResource(previewUrl, title, downloadUrl) {
 
     document.getElementById("pdf-title").textContent = title;
 
@@ -2541,6 +2541,20 @@ function previewResource(previewUrl, title) {
         </iframe>
     `;
 
+    // Connect the Download button inside PDF viewer
+    const downloadButton =
+        document.getElementById("pdf-download-btn");
+
+    if (downloadButton) {
+
+        downloadButton.onclick = function () {
+
+            downloadResource(downloadUrl, title);
+
+        };
+
+    }
+
     document
         .getElementById("pdf-preview-modal")
         .classList.add("open");
@@ -2553,28 +2567,45 @@ function closePdfPreview(){
 
 }
 
-function downloadResource(downloadUrl){
+function downloadResource(downloadUrl, title = "document.pdf") {
 
-    showLoader();
-
-    setTimeout(()=>{
-
-        hideLoader();
-
-        const link = document.createElement("a");
-        link.href = downloadUrl;
-        link.download = "";
-        link.target = "_self";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+    if (!downloadUrl) {
 
         showToast(
-            "Download Started!",
+            "Download link is not available.",
+            "error"
+        );
+
+        return;
+
+    }
+
+    try {
+
+        // Google Drive download links work more reliably
+        // when the browser is navigated directly to them.
+        window.location.href = downloadUrl;
+
+        showToast(
+            "Download started!",
             "success"
         );
 
-    },1800);
+    }
+
+    catch (error) {
+
+        console.error(
+            "Download error:",
+            error
+        );
+
+        showToast(
+            "Unable to download this PDF.",
+            "error"
+        );
+
+    }
 
 }
 function openSubjectResources(subject){
@@ -3277,14 +3308,17 @@ function loadSubjectResources(subject){
 
                 <button
                     class="btn btn-outline"
-                    onclick="${resource.preview ? `previewResource('${resource.preview}','${resource.name}')` : `showToast('PYQs will be uploaded soon.','info')`}">
+                    onclick="${resource.preview ? `previewResource('${resource.preview}','${resource.name}','${resource.download || ""}')` : `showToast('PYQs will be uploaded soon.','info')`}"
                     <i class="fa-solid fa-eye"></i>
                     Preview
                 </button>
 
                 <button
                     class="btn btn-primary"
-                    onclick="${resource.download ? `downloadResource('${resource.download}')` : `showToast('Download will be available soon.','info')`}">
+                    onclick="${resource.download
+                               ? `downloadResource('${resource.download}','${resource.name}')`
+                               : `showToast('Download will be available soon.','info')`
+                    }">
                     <i class="fa-solid fa-download"></i>
                     Download
                 </button>
