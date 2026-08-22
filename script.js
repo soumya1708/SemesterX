@@ -1392,35 +1392,35 @@ function renderSubjectResourceCards() {
                 subjects = [
                     "Mathematics IA (BS-M101)",
                     "Physics I (BS-PH101)",
-                    "Basic Electrical Engineering (ES-EE101)"
+                    "Basic Electrical and Electronics Engineering (ES-EE101)"
                 ];
             }
             else if (appState.currentDept === "ME") {
                 subjects = [
                     "Physics I (BS-PH101)",
                     "Mathematics IB (BS-M102)",
-                    "Basic Electrical Engineering (ES-EE101)"
+                    "Basic Electrical and Electronics Engineering (ES-EE101)"
                 ];
             }
             else if (appState.currentDept === "ECE") {
                 subjects = [
                     "Chemistry I (BS-CH201)",
                     "Mathematics IB (BS-M102)",
-                    "Basic Electrical Engineering (ES-EE101)"
+                    "Basic Electrical and Electronics Engineering (ES-EE101)"
                 ];
             }
             else if (appState.currentDept === "ECS") {
                 subjects = [
                     "Chemistry I (BS-CH201)",
                     "Mathematics IB (BS-M102)",
-                    "Basic Electrical Engineering (ES-EE101)"
+                    "Basic Electrical and Electronics Engineering (ES-EE101)"
                 ];
             }
             else {
                 subjects = [
                     "Mathematics IA (BS-M101)",
                     "Physics I (BS-PH101)",
-                    "Basic Electrical Engineering (ES-EE101)"
+                    "Basic Electrical and Electronics Engineering (ES-EE101)"
                 ];
             }
         }
