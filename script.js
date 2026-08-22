@@ -1393,6 +1393,7 @@ function renderSubjectResourceCards() {
                     "Mathematics IA (BS-M101)",
                     "Physics I (BS-PH101)",
                     "Basic Electrical and Electronics Engineering (ES-EE101)"
+                    "English for Communication Skills (AEC-101)"
                 ];
             }
             else if (appState.currentDept === "ME") {
@@ -1400,6 +1401,7 @@ function renderSubjectResourceCards() {
                     "Physics I (BS-PH101)",
                     "Mathematics IB (BS-M102)",
                     "Basic Electrical and Electronics Engineering (ES-EE101)"
+                    "English for Communication Skills (AEC-101)"
                 ];
             }
             else if (appState.currentDept === "ECE") {
@@ -1407,6 +1409,7 @@ function renderSubjectResourceCards() {
                     "Chemistry I (BS-CH201)",
                     "Mathematics IB (BS-M102)",
                     "Basic Electrical and Electronics Engineering (ES-EE101)"
+                    "English for Communication Skills (AEC-101)"
                 ];
             }
             else if (appState.currentDept === "ECS") {
@@ -1414,6 +1417,7 @@ function renderSubjectResourceCards() {
                     "Chemistry I (BS-CH201)",
                     "Mathematics IB (BS-M102)",
                     "Basic Electrical and Electronics Engineering (ES-EE101)"
+                    "English for Communication Skills (AEC-101)"
                 ];
             }
             else {
@@ -1421,6 +1425,7 @@ function renderSubjectResourceCards() {
                     "Mathematics IA (BS-M101)",
                     "Physics I (BS-PH101)",
                     "Basic Electrical and Electronics Engineering (ES-EE101)"
+                    "English for Communication Skills (AEC-101)"
                 ];
             }
         }
