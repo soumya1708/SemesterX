@@ -1435,7 +1435,7 @@ function renderSubjectResourceCards() {
               "Physics I (BS-PH101)",
               "Mathematics IIB (BS-M202)",
               "English (HM-HU201)",
-              "Programming for Problem Solving (ES-CS201)"
+              "Programming for Problem Solving and AI (ES-CS201)"
             ];
           }
             // IT, ME and other departments
@@ -1443,7 +1443,7 @@ function renderSubjectResourceCards() {
             subjects = [
               "Chemistry I (BS-CH201)",
               "English (HM-HU201)",
-              "Programming for Problem Solving (ES-CS201)",
+              "Programming for Problem Solving and AI (ES-CS201)",
               "Mathematics IIA (BS-M201)"
             ];
           }
@@ -3033,7 +3033,7 @@ function loadSubjectResources(subject){
           }
         ];
       }
-      // ---------- Programming for Problem Solving (ES-CS201) ----------
+      // ---------- Programming for Problem Solving and AI (ES-CS201) ----------
       else if(subject.includes("Programming for Problem Solving")){
         demoResources = [
           {
