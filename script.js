@@ -1400,7 +1400,7 @@ function renderSubjectResourceCards() {
                 subjects = [
                     "Physics I (BS-PH101)",
                     "Mathematics IB (BS-M102)",
-                    "Basic Electrical and Electronics Engineering (ES-EE101)"
+                    "Basic Electrical and Electronics Engineering (ES-EE101)",
                     "English for Communication Skills (AEC-101)"
                 ];
             }
