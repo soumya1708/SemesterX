@@ -1434,15 +1434,19 @@ function renderSubjectResourceCards() {
             subjects = [
               "Physics I (BS-PH101)",
               "Mathematics IIB (BS-M202)",
-              "Programming for Problem Solving and AI (ES-CS201)"
+              "Programming for Problem Solving and AI (ES-CS201)",
+              "Biology for Engineers (BS-BI201)",
+              "Environmental Science (VAC-201)"
             ];
           }
-            // IT, ME and other departments
+          // IT, ME and other departments
           else {
             subjects = [
               "Chemistry I (BS-CH201)",
               "Programming for Problem Solving and AI (ES-CS201)",
-              "Mathematics IIA (BS-M201)"
+              "Mathematics IIA (BS-M201)",
+              "Biology for Engineers (BS-BI201)",
+              "Environmental Science (VAC-201)"
             ];
           }
         }
