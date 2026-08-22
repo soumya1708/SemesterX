@@ -1392,7 +1392,7 @@ function renderSubjectResourceCards() {
                 subjects = [
                     "Mathematics IA (BS-M101)",
                     "Physics I (BS-PH101)",
-                    "Basic Electrical and Electronics Engineering (ES-EE101)"
+                    "Basic Electrical and Electronics Engineering (ES-EE101)",
                     "English for Communication Skills (AEC-101)"
                 ];
             }
@@ -1408,7 +1408,7 @@ function renderSubjectResourceCards() {
                 subjects = [
                     "Chemistry I (BS-CH201)",
                     "Mathematics IB (BS-M102)",
-                    "Basic Electrical and Electronics Engineering (ES-EE101)"
+                    "Basic Electrical and Electronics Engineering (ES-EE101)",
                     "English for Communication Skills (AEC-101)"
                 ];
             }
@@ -1416,7 +1416,7 @@ function renderSubjectResourceCards() {
                 subjects = [
                     "Chemistry I (BS-CH201)",
                     "Mathematics IB (BS-M102)",
-                    "Basic Electrical and Electronics Engineering (ES-EE101)"
+                    "Basic Electrical and Electronics Engineering (ES-EE101)",
                     "English for Communication Skills (AEC-101)"
                 ];
             }
@@ -1424,7 +1424,7 @@ function renderSubjectResourceCards() {
                 subjects = [
                     "Mathematics IA (BS-M101)",
                     "Physics I (BS-PH101)",
-                    "Basic Electrical and Electronics Engineering (ES-EE101)"
+                    "Basic Electrical and Electronics Engineering (ES-EE101)",
                     "English for Communication Skills (AEC-101)"
                 ];
             }
