@@ -1434,7 +1434,6 @@ function renderSubjectResourceCards() {
             subjects = [
               "Physics I (BS-PH101)",
               "Mathematics IIB (BS-M202)",
-              "English (HM-HU201)",
               "Programming for Problem Solving and AI (ES-CS201)"
             ];
           }
@@ -1442,7 +1441,6 @@ function renderSubjectResourceCards() {
           else {
             subjects = [
               "Chemistry I (BS-CH201)",
-              "English (HM-HU201)",
               "Programming for Problem Solving and AI (ES-CS201)",
               "Mathematics IIA (BS-M201)"
             ];
@@ -2894,53 +2892,6 @@ function loadSubjectResources(subject){
           }
         ];
       }
-      // ---------- English (HM-HU201) ---------
-      else if(subject.includes("English")){
-        demoResources = [
-          {
-            name:"Vocabulary Building Notes.pdf",
-            type:"PDF",
-            size:"2.1 MB",
-            preview:"YOUR_PREVIEW_LINK",
-            download:"YOUR_DOWNLOAD_LINK"
-          },
-          {
-            name:"Basic Writing Skills Notes.pdf",
-            type:"PDF",
-            size:"2.0 MB",
-            preview:"YOUR_PREVIEW_LINK",
-            download:"YOUR_DOWNLOAD_LINK"
-          },
-          {
-            name:"Identify Common Errors in Writing Notes.pdf",
-            type:"PDF",
-            size:"1.8 MB",
-            preview:"YOUR_PREVIEW_LINK",
-            download:"YOUR_DOWNLOAD_LINK"
-          },
-          {
-            name:"Nature and Style of Sensible Writing Notes.pdf",
-            type:"PDF",
-            size:"2.2 MB",
-            preview:"YOUR_PREVIEW_LINK",
-            download:"YOUR_DOWNLOAD_LINK"
-          },
-          {
-            name:"Writing Practices Notes.pdf",
-            type:"PDF",
-            size:"1.9 MB",
-            preview:"YOUR_PREVIEW_LINK",
-            download:"YOUR_DOWNLOAD_LINK"
-          },
-          {
-            name:"Important Questions.pdf",
-            type:"PDF",
-            size:"1.9 MB",
-            preview:"YOUR_PREVIEW_LINK",
-            download:"YOUR_DOWNLOAD_LINK"
-          },
-        ];
-      }
     }
     // ---------------- PYQS ----------------
     else if(appState.activeResourceCategory === "pyqs"){
@@ -3110,46 +3061,6 @@ function loadSubjectResources(subject){
             size:"863KB",
             preview:"https://drive.google.com/file/d/15Cws954Kd79D7xisowxKH4WhElpQZtkf/preview",
             download:"https://drive.google.com/uc?export=download&id=15Cws954Kd79D7xisowxKH4WhElpQZtkf"
-          }
-        ];
-      }
-      // ---------- English (HM-HU201) ----------
-      else if(subject.includes("English")){
-        demoResources = [
-          {
-            name:"2018-19 PYQ.pdf",
-            type:"PDF",
-            size:"354KB",
-            preview:"https://drive.google.com/file/d/1AvmY1GZJtJzgKENUMGPaRvY2zBLSuyym/preview",
-            download:"https://drive.google.com/uc?export=download&id=1AvmY1GZJtJzgKENUMGPaRvY2zBLSuyym"
-          },
-          {
-            name:"2022-23 PYQ.pdf",
-            type:"PDF",
-            size:"100KB",
-            preview:"https://drive.google.com/file/d/1ceX7PhC9pcK2XXhHgAxOnn8oAhLGUUWj/preview",
-            download:"https://drive.google.com/uc?export=download&id=1ceX7PhC9pcK2XXhHgAxOnn8oAhLGUUWj"
-          },
-          {
-            name:"2023-24 PYQ.pdf",
-            type:"PDF",
-            size:"121KB",
-            preview:"https://drive.google.com/file/d/1mxg6IbS_N_M38g-e3LERUhaNk0uCXlar/preview",
-            download:"https://drive.google.com/uc?export=download&id=1mxg6IbS_N_M38g-e3LERUhaNk0uCXlar"
-          },
-          {
-            name:"2024-25 PYQ.pdf",
-            type:"PDF",
-            size:"79KB",
-            preview:"https://drive.google.com/file/d/1iXsl0TrNCzZoOELcv1o6TwJS5LHg4WRO/preview",
-            download:"https://drive.google.com/uc?export=download&id=1iXsl0TrNCzZoOELcv1o6TwJS5LHg4WRO"
-          },
-          {
-            name:"2025-26 PYQ.pdf",
-            type:"PDF",
-            size:"227KB",
-            preview:"https://drive.google.com/file/d/1wIu1Hv9xue90IoFe3ISL2YXTOZnd1RI9/preview",
-            download:"https://drive.google.com/uc?export=download&id=1wIu1Hv9xue90IoFe3ISL2YXTOZnd1RI9"
           }
         ];
       }
