@@ -1,25 +1,4 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
 
-import {
-  getAuth,
-  GoogleAuthProvider,
-  signInWithPopup
-} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyDMHNN-u_K5wgD1ReiavgAhxvFLnRNR-o0",
-  authDomain: "semesterx-79f36.firebaseapp.com",
-  projectId: "semesterx-79f36",
-  storageBucket: "semesterx-79f36.firebasestorage.app",
-  messagingSenderId: "848053190954",
-  appId: "1:848053190954:web:df719a4ad2546872ca1e53",
-  measurementId: "G-B2FBV397DS"
-};
-
-const app = initializeApp(firebaseConfig);
-
-const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
 /*==========================================================
                 SemesterX Frontend
         Google OAuth + Spring Boot + JWT
