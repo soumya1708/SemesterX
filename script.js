@@ -480,6 +480,17 @@ function initEventListeners() {
     initializeFAQ();
 
     initializeBackToTop();
+  const googleButton =
+    document.getElementById("google-signin-button");
+
+if (googleButton) {
+
+    googleButton.addEventListener(
+        "click",
+        loginWithGoogle
+    );
+
+}
 
 }
 
