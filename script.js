@@ -1,4 +1,3 @@
-
 /*==========================================================
                 SemesterX Frontend
         Google OAuth + Spring Boot + JWT
@@ -68,6 +67,10 @@ async function initializeApplication() {
     initEventListeners();
     initializeSubjectResourceSearch();
 
+    await waitForGoogleSDK();
+
+    initializeGoogleSignIn();
+
     checkPersistentAuthStatus();
 
     startLoaderAnimation();
@@ -110,6 +113,84 @@ function startLoaderAnimation() {
                 WAIT FOR GOOGLE SDK
 ==========================================================*/
 
+function waitForGoogleSDK() {
+
+    return new Promise(resolve => {
+
+        if (window.google) {
+
+            resolve();
+
+            return;
+
+        }
+
+        const interval = setInterval(() => {
+
+            if (window.google) {
+
+                clearInterval(interval);
+
+                resolve();
+
+            }
+
+        }, 100);
+
+    });
+
+}
+
+
+/*==========================================================
+                    GOOGLE LOGIN
+==========================================================*/
+
+function initializeGoogleSignIn() {
+
+    if (!window.google) {
+
+        console.error("Google Identity Services not loaded");
+
+        return;
+
+    }
+
+    google.accounts.id.initialize({
+
+        client_id:  "611539225489-e1lc5hfodtp06sdro3s45dscnqprdgaj.apps.googleusercontent.com",
+
+        callback: handleCredentialResponse
+
+    });
+
+    const googleButton = document.getElementById("google-signin-button");
+
+    if (googleButton) {
+
+        google.accounts.id.renderButton(
+
+            googleButton,
+
+            {
+
+                theme: "filled_blue",
+
+                size: "large",
+
+                shape: "pill",
+
+                width: 280,
+
+                text: "continue_with"
+
+            }
+
+        );
+
+    }
+
+}
 
 
 
@@ -117,59 +198,67 @@ function startLoaderAnimation() {
                     GOOGLE CALLBACK
 ==========================================================*/
 
-async function loginWithGoogle() {
+async function handleCredentialResponse(response) {
+
+
+
 
     try {
 
-        const result = await signInWithPopup(auth, provider);
 
-        const user = result.user;
+        const result = await fetch(
 
-        console.log("Firebase Login Successful");
-        console.log("Name:", user.displayName);
-        console.log("Email:", user.email);
-        console.log("UID:", user.uid);
 
-        // Firebase ID Token
-        const idToken = await user.getIdToken();
 
-        console.log("Firebase ID Token:", idToken);
-
-        // Send Firebase token to your Spring Boot backend
-        const response = await fetch(
             BACKEND_URL + "/api/auth/google",
+
             {
+
                 method: "POST",
 
                 headers: {
+
                     "Content-Type": "application/json"
+
                 },
 
                 body: JSON.stringify({
-                    idToken: idToken
+
+                    idToken: response.credential
+
                 })
+
             }
+
         );
 
-        if (!response.ok) {
-            throw new Error("Backend Authentication Failed");
+        if (!result.ok) {
+
+            throw new Error("Authentication Failed");
+
         }
 
-        const data = await response.json();
+        const data = await result.json();
 
         console.log("Backend Response:", data);
 
-        // Existing SemesterX JWT system
+
         localStorage.setItem("jwt", data.token);
 
         localStorage.setItem(
+
             "user",
+
             JSON.stringify(data)
+
         );
 
         showToast(
+
             "Welcome " + data.name,
+
             "success"
+
         );
 
         closeAuthModal();
@@ -183,17 +272,25 @@ async function loginWithGoogle() {
             postAuthRedirectActionCallback();
 
             postAuthRedirectActionCallback = null;
+
         }
 
-    } catch (error) {
+    }
 
-        console.error("Firebase Google Login Error:", error);
+    catch (error) {
+
+        console.error(error);
 
         showToast(
+
             "Google Login Failed",
+
             "error"
+
         );
+
     }
+
 }
 
 
@@ -459,17 +556,6 @@ function initEventListeners() {
     initializeFAQ();
 
     initializeBackToTop();
-  const googleButton =
-    document.getElementById("google-signin-button");
-
-if (googleButton) {
-
-    googleButton.addEventListener(
-        "click",
-        loginWithGoogle
-    );
-
-}
 
 }
 
